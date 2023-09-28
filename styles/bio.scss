@@ -1,5 +1,5 @@
 @use './partials/resets.scss' as *;
-@use './partials/variables' as *; 
+@use './partials/variables' as *;
 @use './partials/mixins' as *;
 
 
@@ -10,10 +10,8 @@
   padding: 1rem 0;
   color: $text-color-2;
 
-  &__title {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-weight: bold;
+  &__logo {
+    @include header-section-text;
     text-transform: uppercase;
   }
   &__nav {
@@ -47,4 +45,106 @@
     position: relative;
     left: 0;
   }
+}
+
+
+.about {
+ padding: 1rem;
+ margin: auto;
+
+  &__title {
+    @include header-section-text;
+  }
+  &__image {
+    align-items: center;
+    width: 100%
+  }
+  
+  blockquote, p {
+    @include body-text;
+  }
+}
+
+
+.band {
+  display: flex;
+  flex-direction: column;
+  @include body-text;
+  margin: auto;
+  
+  &__name {
+    @include header-section-text;
+    padding-left: 1rem;
+    // font-weight: bold;
+  } 
+    p {
+      @include body-text;
+      padding-left: 1rem;
+      padding-bottom: 2rem;
+      }
+    }
+
+
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  // align-items: center;
+  // margin: 0 1rem;
+  // padding: rem;
+
+    &__title {
+      @include header-section-text;
+      font-weight: 600;
+      text-align: left;
+      padding-left: 1rem;
+      padding-bottom: 1rem;
+    }
+    &__image {
+      width: 100%;
+      padding: 1rem;
+    }
+}
+    
+
+.footer {
+  background-color: $background-color-1;
+  width: 100%;
+  align-items: left;
+  padding-left: 1rem;
+  color: $text-color-2;
+  
+    &__social--title {
+      @include header-section-text;
+      font-weight: 500;
+    }
+    .social__nav--list {
+      display: flex;
+      justify-content: left;
+      gap: 2rem;
+      padding: 1rem 0;
+    }
+  .footer__contact {
+    @include footer-text;
+    
+    &--name {
+      font-weight: 500;
+    }
+    &--name,
+    &--address, 
+    &--email {
+      padding: 1rem 0 1.5rem 0;
+    }
+  }
+  &__logo {
+    @include header-section-text;
+    text-transform: uppercase;
+    padding: 2rem 0 1rem 0;
+  }
+  &__copyright {
+   font-size: 0.8rem;
+   padding-bottom: 1rem;
+  }
+
 }
