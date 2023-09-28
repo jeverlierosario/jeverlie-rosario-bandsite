@@ -31,106 +31,102 @@ address {
   text-align: center;
   padding: 1rem;
   color: #ffffff;
-  width: 100%;
 }
 .header__logo {
   font-size: 1.5rem;
   line-height: 2rem;
+  font-weight: 700;
   text-transform: uppercase;
 }
 .header__nav {
   font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 600;
 }
 .header__nav .nav__list {
   display: flex;
   justify-content: space-around;
-  margin: auto;
-  padding: 0.25rem;
 }
 
 .hero {
-  display: block;
-  align-items: center;
-  justify-content: center;
+  position: relative;
   background-image: url("../assets/images/hero-bio.jpg");
   background-size: cover;
   background-position: center;
   color: #ffffff;
-  padding: 20px;
-  width: 100%;
-  height: 200px;
-  margin: 0;
-}
-.hero__image {
-  background-image: url("../assets/images/hero-bio.jpg");
-  background-size: cover;
-  width: 100vw;
+  padding: 6rem 5rem;
 }
 .hero__name {
   font-size: 1.5rem;
-  font-weight: bold;
-  position: relative;
-  top: 40%;
-  left: 0;
+  line-height: 2rem;
+  font-weight: 700;
+  text-align: left;
+  font-weight: 600;
+  position: absolute;
+  top: 5rem;
+  left: 1rem;
 }
 
 .about {
-  padding: 1rem;
-  margin: auto;
+  padding-top: 2rem;
+  margin: 0 1rem;
 }
 .about__title {
   font-size: 1.5rem;
   line-height: 2rem;
+  font-weight: 700;
+  font-weight: 600;
+  padding-bottom: 1rem;
 }
 .about__image {
   align-items: center;
   width: 100%;
+  padding-bottom: 1rem;
 }
 .about blockquote, .about p {
-  font-size: 1.438rem;
-  line-height: 1.125rem;
-  font-weight: regular;
-  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 600;
 }
 
 .band {
   display: flex;
   flex-direction: column;
-  font-size: 1.438rem;
+  font-size: 0.813rem;
   line-height: 1.125rem;
-  font-weight: regular;
   font-weight: 400;
-  margin: auto;
+  margin-right: 1rem;
 }
 .band__name {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  padding-left: 1rem;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  padding: 1rem;
+  font-weight: 500;
 }
 .band p {
-  font-size: 1.438rem;
+  font-size: 0.813rem;
   line-height: 1.125rem;
-  font-weight: regular;
   font-weight: 400;
-  padding-left: 1rem;
-  padding-bottom: 2rem;
+  padding: 0 0.5rem 0.5rem 1rem;
 }
 
 .gallery {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: #fafafa;
+  padding: 1rem;
 }
 .gallery__title {
   font-size: 1.5rem;
   line-height: 2rem;
+  font-weight: 700;
   font-weight: 600;
-  text-align: left;
-  padding-left: 1rem;
-  padding-bottom: 1rem;
 }
 .gallery__image {
   width: 100%;
+  padding-top: 1rem;
 }
 
 .footer {
@@ -143,6 +139,7 @@ address {
 .footer__social--title {
   font-size: 1.5rem;
   line-height: 2rem;
+  font-weight: 700;
   font-weight: 500;
 }
 .footer .social__nav--list {
@@ -167,6 +164,7 @@ address {
 .footer__logo {
   font-size: 1.5rem;
   line-height: 2rem;
+  font-weight: 700;
   text-transform: uppercase;
   padding: 2rem 0 1rem 0;
 }

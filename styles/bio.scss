@@ -2,29 +2,25 @@
 @use './partials/variables' as *;
 @use './partials/mixins' as *;
 
-// header, main, footer {
-//   margin: $mobile-margin;
-// }
 
 .header {
   background-color: $background-color-1;
   text-align: center;
   padding: 1rem;
   color: $text-color-2;
-  width: 100%;
-
   &__logo {
     @include header-section-text;
     text-transform: uppercase;
+    // padding: 1rem;
   }
   &__nav {
-    font-size: 0.875rem;
-
+    @include subheader-text;
+    // padding-top: 1rem;
     .nav__list {
       display: flex;
       justify-content: space-around;
-      margin: auto;
-      padding: 0.25rem;
+      // margin: auto 0;
+      // padding-top: 1rem;
       // SORT OUT ACTIVE AND INACTIVE STYLES//
     }
   }
@@ -32,69 +28,80 @@
 
 
 .hero {
-  display: block;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  // display: flex;
+  // // align-items: center;
+  // justify-content: center;
   background-image: url("../assets/images/hero-bio.jpg");
   background-size: cover;
   background-position: center;
   color: $text-color-2;
-  padding: 20px;
-  width: 100%;
-  height: 200px;
-  margin: 0;
+  padding: 6rem 5rem;
+  // align-items: left;
+  // width: 100%;
+  // height: 200px;
+  // margin: auto;
 
-  &__image {
-    background-image: url("../assets/images/hero-bio.jpg");
-    background-size: cover;
-    width: 100vw;
+  // &__image {
+  //   background-image: url("../assets/images/hero-bio.jpg");
+  //   background-size: cover;
+  //   width: 100vw;
 
-  }
+  // }
 
   &__name {
-    font-size: 1.5rem;
-    font-weight: bold;
-    position: relative;
-    top: 40%;
-    left: 0;
+    @include header-section-text;
+    text-align: left;
+    font-weight: 600;
+    // align-self: center;
+    position: absolute;
+    top: 5rem;
+    left: 1rem;
     
   }
 } 
 
+// main {
+//   margin: 0 1rem;
+// }
 
 .about {
- padding: 1rem;
- margin: auto;
-
+ padding-top: 2rem;
+ margin: 0 1rem;
   &__title {
     @include header-section-text;
+    font-weight: 600;
+    padding-bottom: 1rem;
   }
   &__image {
     align-items: center;
-    width: 100%
+    width: 100%;
+    padding-bottom: 1rem;
   }
-  
   blockquote, p {
-    @include body-text;
+    @include subheader-text;
+    // padding-bottom: 1rem;
   }
-}
+  }
+
 
 
 .band {
   display: flex;
   flex-direction: column;
   @include body-text;
-  margin: auto;
+  margin-right: 1rem;
   
   &__name {
-    @include header-section-text;
-    padding-left: 1rem;
-    // font-weight: bold;
+    @include body-text;
+    padding: 1rem;
+    font-weight: 500;
   } 
     p {
       @include body-text;
-      padding-left: 1rem;
-      padding-bottom: 2rem;
+      padding: 0 0.5rem 0.5rem 1rem;
+      // padding-left: 1rem;
+      // padding-bottom: 2rem;
       }
     }
 
@@ -104,20 +111,23 @@
   display: flex;
   flex-direction: column;
   justify-content:space-between;
+  background-color: $background-color-3;
   // align-items: center;
   // margin: 0 1rem;
-  // padding: rem;
+  padding: 1rem;
+  // align-items: left;
 
     &__title {
       @include header-section-text;
       font-weight: 600;
-      text-align: left;
-      padding-left: 1rem;
-      padding-bottom: 1rem;
+      // text-align: left;
+      // padding-left: 1rem;
+      // padding-bottom: 1rem;
     }
     &__image {
       width: 100%;
       // padding: 1rem;
+      padding-top: 1rem;
     }
 }
     
