@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  border: border-box;
 }
 
 ul, ol {
@@ -28,8 +29,9 @@ address {
 .header {
   background-color: #323232;
   text-align: center;
-  padding: 1rem 0;
+  padding: 1rem;
   color: #ffffff;
+  width: 100%;
 }
 .header__logo {
   font-size: 1.5rem;
@@ -47,8 +49,9 @@ address {
 }
 
 .hero {
-  display: flex;
+  display: block;
   align-items: center;
+  justify-content: center;
   background-image: url("../assets/images/hero-bio.jpg");
   background-size: cover;
   background-position: center;
@@ -56,11 +59,18 @@ address {
   padding: 20px;
   width: 100%;
   height: 200px;
+  margin: 0;
+}
+.hero__image {
+  background-image: url("../assets/images/hero-bio.jpg");
+  background-size: cover;
+  width: 100vw;
 }
 .hero__name {
   font-size: 1.5rem;
   font-weight: bold;
   position: relative;
+  top: 40%;
   left: 0;
 }
 
@@ -121,7 +131,6 @@ address {
 }
 .gallery__image {
   width: 100%;
-  padding: 1rem;
 }
 
 .footer {
