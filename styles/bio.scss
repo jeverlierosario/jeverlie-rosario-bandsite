@@ -145,18 +145,19 @@
 
 
 
-//Mobile styles (320px - 767px
-@media (max-width: 767px) {
+//Mobile Styles (320px to 767px)
+//text styles
+@media (min-width:320px) and (max-width: 767px) {
   .header__logo,
   .hero__name,
   .about__title,
   .gallery__title,
   .footer__social—title,
   .footer__logo {
-    @include header-section-text
+    @include header-section-text;
   }
   blockquote, p{
-    @include subheader-text
+    @include subheader-text;
   }
   .band {
     @include body-text;
@@ -164,7 +165,7 @@
   .footer__contact {
     @include footer-text;
   }
-//layout grid
+//margins, paddings
   .header {
     padding: 1rem;
   }
@@ -190,6 +191,61 @@
       gap: 1rem;
     }
   }
+} 
+
+//Tablet Styles (768px to 1279px)
+//text styles
+@media (min-width:768px) and (max-width:1279px) {
+  // .header__logo,
+  .hero__name {
+  // .about__title,
+  // .gallery__title,
+  // .footer__social—title,
+  // .footer__logo {
+    @include header-text-wider;
+  }
+  .header__logo,
+  .about__title,
+  .gallery__title,
+  .footer__social—title,
+  .footer__logo {
+    @include section-text-wider;
+  }
+  blockquote, p{
+    @include subheader-text-wider;
+  }
+  .band {
+    @include body-text-wider;
+  }
+  .footer__contact {
+    @include footer-text-wider;
+  }
+//margins, paddings
+  .header {
+    padding: 1.5rem;
+  }
+    .nav__link {
+      padding: 0.25rem;
+    }
+  .hero {
+    padding: 5rem 3rem;
+  }
+  .about {
+    padding-top: 1rem;
+    margin: 0 $tablet-margin;
+  }
+  // .band {
+  //   margin-right: 0;
+  // }
+  // .gallery {
+  //   padding: 1rem;
+  // }
+  // .footer {
+  //   padding: 1rem;
+  //   .social__nav--list {
+  //     gap: 1rem;
+  //   }
+  
 } 
 
   

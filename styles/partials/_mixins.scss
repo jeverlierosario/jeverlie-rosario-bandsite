@@ -1,3 +1,4 @@
+//Mobile text styles 
 @mixin header-section-text {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -21,6 +22,42 @@
 @mixin footer-text {
   font-size: 0.813rem;
   line-height: 1.125rem;
+  // font-weight: regular;
+  font-weight: 400;
+  // font-style: normal;
+}
+
+//Tablet & Desktop text styles
+@mixin header-text-wider {
+  font-size: 3.75rem;
+  line-height: 4.25rem;
+  // font-weight: 700;
+  // doesn't match the mockup
+}
+
+@mixin section-text-wider {
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  // font-weight: 700;
+  // doesn't match the mockup
+}
+
+@mixin subheader-text-wider {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+}
+
+@mixin body-text-wider {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  // font-weight: regular;
+  font-weight: 400;
+}
+
+@mixin footer-text-wider {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   // font-weight: regular;
   font-weight: 400;
   // font-style: normal;
