@@ -12,11 +12,6 @@
     @include header-section-text;
     text-transform: uppercase;
   }
-  // .nav__list > li {
-  //   display: inline;
-  //  justify-content: space-between;
-  //  padding 
-  // }
   .nav__link {
     display: flex;
     justify-content: space-around;
@@ -35,26 +30,13 @@
 }
 
 
-
-
-  
-
-  
-
-
-
-
-
-
-
-// Below is good
-
 .hero {
   position: relative;
+  // background-color: #323232;
   background-image: url("../assets/images/hero-bio.jpg");
   background-size: cover;
   background-position: center;
-  opacity: 80%;
+  opacity: 50%;
   color: $text-color-2;
   padding: 6rem 5rem;
   &__name {
@@ -64,7 +46,6 @@
     position: absolute;
     top: 5rem;
     left: 1rem;
-    
   }
 } 
 
@@ -94,15 +75,15 @@
   @include body-text;
   margin-right: 1rem;
   &__name {
-    @include body-text;
+    // @include body-text;
     padding: 1rem;
     font-weight: 500;
-  } 
+  }  
     p {
-      @include body-text;
+      // @include body-text;
       padding: 0 0.5rem 0.5rem 1rem;
       }
-    }
+}
 
 
 .gallery {
@@ -160,5 +141,55 @@
     font-size: 0.7rem;
    padding-top: 1rem;
   }
-
 }
+
+
+
+//Mobile styles (320px - 767px
+@media (max-width: 767px) {
+  .header__logo,
+  .hero__name,
+  .about__title,
+  .gallery__title,
+  .footer__social—title,
+  .footer__logo {
+    @include header-section-text
+  }
+  blockquote, p{
+    @include subheader-text
+  }
+  .band {
+    @include body-text;
+  }
+  .footer__contact {
+    @include footer-text;
+  }
+//layout grid
+  .header {
+    padding: 1rem;
+  }
+    .nav__link {
+      padding: 0.125rem;
+    }
+  .hero {
+    padding: 4rem 2rem;
+  }
+  .about {
+    padding-top: 1rem;
+    margin: 0 $mobile-margin;
+  }
+  .band {
+    margin-right: 0;
+  }
+  .gallery {
+    padding: 1rem;
+  }
+  .footer {
+    padding: 1rem;
+    .social__nav--list {
+      gap: 1rem;
+    }
+  }
+} 
+
+  
