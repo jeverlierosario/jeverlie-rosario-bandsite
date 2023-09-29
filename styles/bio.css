@@ -36,6 +36,21 @@ address {
   line-height: 2rem;
   text-transform: uppercase;
 }
+.header .nav__link {
+  display: flex;
+  justify-content: space-around;
+  padding: 0.125rem;
+  color: #e1e1e1;
+}
+.header .nav__link:hover {
+  color: #ffffff;
+}
+.header .nav__link--active {
+  color: #ffffff;
+  font-weight: bold;
+  border-bottom: 5px solid #ffffff;
+  padding-bottom: 1rem;
+}
 
 .hero {
   position: relative;

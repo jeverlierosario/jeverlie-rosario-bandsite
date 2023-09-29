@@ -12,7 +12,33 @@
     @include header-section-text;
     text-transform: uppercase;
   }
+  // .nav__list > li {
+  //   display: inline;
+  //  justify-content: space-between;
+  //  padding 
+  // }
+  .nav__link {
+    display: flex;
+    justify-content: space-around;
+    padding: 0.125rem;
+    color: $text-color-3;
+    &:hover {
+      color:#ffffff;
+    }
+    &--active {
+      color: #ffffff;
+      font-weight: bold;
+      border-bottom: 5px solid #ffffff;
+      padding-bottom: 1rem;
+      }
+    }
 }
+
+
+
+
+  
+
   
 
 
