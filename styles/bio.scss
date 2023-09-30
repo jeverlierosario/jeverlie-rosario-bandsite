@@ -143,109 +143,310 @@
   }
 }
 
+/* Mobile Styles (320px and below) */
+@media (max-width: 767px) {
+  body {
+    font-size: 14px;
+    line-height: 20px;
+  }
 
-
-//Mobile Styles (320px to 767px)
-//text styles
-@media (min-width:320px) and (max-width: 767px) {
-  .header__logo,
-  .hero__name,
-  .about__title,
-  .gallery__title,
-  .footer__social—title,
-  .footer__logo {
-    @include header-section-text;
-  }
-  blockquote, p{
-    @include subheader-text;
-  }
-  .band {
-    @include body-text;
-  }
-  .footer__contact {
-    @include footer-text;
-  }
-//margins, paddings
   .header {
     padding: 1rem;
-  }
+    .header__logo {
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: 600;
+    }
     .nav__link {
       padding: 0.125rem;
     }
+  }
+
   .hero {
     padding: 4rem 2rem;
+    &__name {
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: 600;
+    }
   }
+
   .about {
     padding-top: 1rem;
     margin: 0 $mobile-margin;
+    .about__title {
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 600;
+    }
   }
+
   .band {
     margin-right: 0;
+    &__name {
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 500;
+    }
+    p {
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
+
   .gallery {
     padding: 1rem;
+    &__title {
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 600;
+    }
   }
+
   .footer {
     padding: 1rem;
+    .footer__social--title {
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 600;
+    }
     .social__nav--list {
       gap: 1rem;
     }
+    .footer__contact {
+      &--name {
+        font-size: 14px;
+        line-height: 20px;
+      }
+      &--address,
+      &--email {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+    .footer__logo {
+      font-size: 24px;
+      line-height: 32px;
+    }
+    .footer__copyright {
+      font-size: 12px;
+      line-height: 20px;
+      font-weight: 700;
+    }
   }
-} 
+}
 
-//Tablet Styles (768px to 1279px)
-//text styles
-@media (min-width:768px) and (max-width:1279px) {
-  // .header__logo,
-  .hero__name {
-  // .about__title,
-  // .gallery__title,
-  // .footer__social—title,
-  // .footer__logo {
-    @include header-text-wider;
+/* Tablet Styles (768px to 1279px) */
+@media (min-width: 768px) and (max-width: 1279px) {
+  body {
+    font-size: 16px;
+    line-height: 24px;
   }
-  .header__logo,
-  .about__title,
-  .gallery__title,
-  .footer__social—title,
-  .footer__logo {
-    @include section-text-wider;
-  }
-  blockquote, p{
-    @include subheader-text-wider;
-  }
-  .band {
-    @include body-text-wider;
-  }
-  .footer__contact {
-    @include footer-text-wider;
-  }
-//margins, paddings
+
   .header {
     padding: 1.5rem;
-  }
+    .header__logo {
+      font-size: 36px;
+      line-height: 44px;
+      font-weight: 700;
+    }
     .nav__link {
       padding: 0.25rem;
     }
+  }
+
   .hero {
     padding: 5rem 3rem;
+    &__name {
+      font-size: 36px;
+      line-height: 44px;
+      font-weight: 600;
+    }
   }
+
   .about {
-    padding-top: 1rem;
     margin: 0 $tablet-margin;
   }
-  // .band {
-  //   margin-right: 0;
-  // }
-  // .gallery {
-  //   padding: 1rem;
-  // }
-  // .footer {
-  //   padding: 1rem;
-  //   .social__nav--list {
-  //     gap: 1rem;
-  //   }
-  
-} 
+
+  /* Add other styles for tablets here */
+}
+
+/* Desktop Styles (1280px and above) */
+@media (min-width: 1280px) {
+  /* Add styles for desktop here */
+  body {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .header {
+    padding: 2rem;
+  }
+
+  .hero {
+    padding: 6rem 5rem;
+  }
+
+  .about {
+    margin: 0 auto;
+  }
+
+  /* Add other styles for desktop here */
+}
+
+
+// //Mobile Styles (320px to 767px)
+// //text styles
+// @media (min-width:320px) and (max-width: 767px) {
+//   .header__logo,
+//   .hero__name,
+//   .about__title,
+//   .gallery__title,
+//   .footer__social—title,
+//   .footer__logo {
+//     @include header-section-text;
+//   }
+//   blockquote, p{
+//     @include subheader-text;
+//   }
+//   .band {
+//     @include body-text;
+//   }
+//   .footer__contact {
+//     @include footer-text;
+//   }
+// //margins, paddings
+//   .header {
+//     padding: 1rem;
+//   }
+//     .nav__link {
+//       padding: 0.125rem;
+//     }
+//   .hero {
+//     padding: 4rem 2rem;
+//   }
+//   .about {
+//     padding-top: 1rem;
+//     margin: 0 $mobile-margin;
+//   }
+//   .band {
+//     margin-right: 0;
+//   }
+//   .gallery {
+//     padding: 1rem;
+//   }
+//   .footer {
+//     padding: 1rem;
+//     .social__nav--list {
+//       gap: 1rem;
+//     }
+//   }
+// } 
+
+// //Tablet Styles (768px to 1279px)
+// //text styles
+// @media (min-width:768px) and (max-width:1279px) {
+//   // .header__logo,
+//   .hero__name {
+//   // .about__title,
+//   // .gallery__title,
+//   // .footer__social—title,
+//   // .footer__logo {
+//     @include header-text-wider;
+//   }
+//   .header__logo,
+//   .about__title,
+//   .gallery__title,
+//   .footer__social—title,
+//   .footer__logo {
+//     @include section-text-wider;
+//   }
+//   blockquote, p{
+//     @include subheader-text-wider;
+//   }
+//   .band {
+//     @include body-text-wider;
+//   }
+//   .footer__contact {
+//     @include footer-text-wider;
+//   }
+// //margins, paddings
+//   .header {
+//     padding: 1.5rem;
+//   }
+//     .nav__link {
+//       padding: 0.25rem;
+//     }
+//   .hero {
+//     padding: 5rem 3rem;
+//   }
+//   .about {
+//     padding-top: 1rem;
+//     margin: 0 $tablet-margin;
+//   }
+//   // .band {
+//   //   margin-right: 0;
+//   // }
+//   // .gallery {
+//   //   padding: 1rem;
+//   // }
+//   // .footer {
+//   //   padding: 1rem;
+//   //   .social__nav--list {
+//   } 
 
   
+
+
+// //Desktop Styles (768px to 1279px)
+// //text styles
+// @media (min-width:1280px) {
+//   // .header__logo,
+//   .hero__name {
+//   // .about__title,
+//   // .gallery__title,
+//   // .footer__social—title,
+//   // .footer__logo {
+//     @include header-text-wider;
+//   }
+//   .header__logo,
+//   .about__title,
+//   .gallery__title,
+//   .footer__social—title,
+//   .footer__logo {
+//     @include section-text-wider;
+//   }
+//   blockquote, p{
+//     @include subheader-text-wider;
+//   }
+//   .band {
+//     @include body-text-wider;
+//   }
+//   .footer__contact {
+//     @include footer-text-wider;
+//   }
+// //margins, paddings
+//   .header {
+//     padding: 2rem;
+//   }
+//     .nav__link {
+//       padding: 0.25rem;
+//     }
+//   .hero {
+//     padding: 6rem 5rem;
+//   }
+//   .about {
+//     // padding-top: 1rem;
+//     margin: $desktop-margin;
+//   }
+//   // .band {
+//   //   margin-right: 0;
+//   // }
+//   // .gallery {
+//   //   padding: 1rem;
+//   // }
+//   // .footer {
+//   //   padding: 1rem;
+//   //   .soc}ial__nav--list {
+//   //     gap: 1rem;
+//   }
