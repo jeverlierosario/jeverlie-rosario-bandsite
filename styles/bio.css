@@ -323,42 +323,53 @@ address {
 
 .footer {
   background-color: #323232;
-  align-items: left;
-  padding: 2rem 1rem;
+  padding: 2rem;
   color: #ffffff;
+  position: relative;
 }
-.footer__social--title {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 600;
+.footer .footer__social {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding-bottom: 1rem;
 }
-.footer .social__nav--list {
+.footer .footer__social--title {
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  font-weight: 500;
+}
+.footer .footer__social .social__nav--list {
   display: flex;
   justify-content: left;
   gap: 2rem;
-  padding: 1rem 0;
+  padding-right: 1rem;
+  padding-top: 0.8rem;
 }
 .footer .footer__contact {
-  font-size: 0.813rem;
-  line-height: 1.125rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   font-weight: 400;
   display: flex;
-  flex-direction: column;
-  justify-content: left;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 2rem;
 }
 .footer .footer__contact--name {
-  padding-top: 1rem;
-}
-.footer .footer__contact--address, .footer .footer__contact--email {
-  padding: 1rem 0;
-}
-.footer__logo {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  text-transform: uppercase;
   padding-top: 2rem;
 }
+.footer .footer__contact--address, .footer .footer__contact--email {
+  padding: 2rem 0;
+}
+.footer__logo {
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
 .footer__copyright {
-  font-size: 0.7rem;
-  padding-top: 1rem;
+  font-size: 1rem;
+  padding: 2rem 0 1rem 0;
 }/*# sourceMappingURL=bio.css.map */
