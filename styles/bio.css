@@ -130,7 +130,7 @@ address {
     text-align: left;
     padding-top: 1rem;
   }
-  .gallery__image {
+  .gallery .gallery__image {
     width: 100%;
     padding-top: 1rem;
   }
@@ -489,7 +489,7 @@ address {
   }
   .gallery {
     background-color: #fafafa;
-    padding: 2rem 10rem;
+    padding: 2rem 8rem;
   }
   .gallery__title {
     font-size: 2.25rem;
