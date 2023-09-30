@@ -42,9 +42,11 @@ address {
     justify-content: space-around;
     padding: 0.125rem;
     color: #e1e1e1;
+    transition: color 0.2s ease;
   }
   .header .nav__link:hover {
     color: #ffffff;
+    font-weight: bold;
   }
   .header .nav__link--active {
     color: #ffffff;
@@ -133,6 +135,11 @@ address {
   .gallery .gallery__image {
     width: 100%;
     padding-top: 1rem;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+  }
+  .gallery .gallery__image:hover {
+    filter: grayscale(0%);
   }
   .footer {
     background-color: #323232;
@@ -207,9 +214,11 @@ address {
   .header .nav__link .nav__link--active a {
     text-decoration: none;
     color: #e1e1e1;
+    transition: color 0.2s ease;
   }
   .header .nav__link .nav__link--active a:hover {
     color: #ffffff;
+    font-weight: bold;
   }
   .hero {
     position: relative;
@@ -313,6 +322,11 @@ address {
   .gallery__images .gallery__image {
     width: calc(33.33% - 1rem);
     height: auto;
+    filter: grayscale(100%);
+    transition: filter 0.2s ease;
+  }
+  .gallery__images .gallery__image:hover {
+    filter: grayscale(0%);
   }
   .footer {
     background-color: #323232;
@@ -396,9 +410,11 @@ address {
   .header .nav__link .nav__link--active a {
     text-decoration: none;
     color: #e1e1e1;
+    transition: color 0.2s ease;
   }
   .header .nav__link .nav__link--active a:hover {
     color: #ffffff;
+    font-weight: bold;
   }
   .hero {
     position: relative;
@@ -504,6 +520,11 @@ address {
   .gallery__images .gallery__image {
     width: calc(33.33% - 1rem);
     height: auto;
+    filter: grayscale(100%);
+    transition: filter 0.2s ease;
+  }
+  .gallery__images .gallery__image:hover {
+    filter: grayscale(0%);
   }
   .footer {
     background-color: #323232;
