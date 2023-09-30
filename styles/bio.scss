@@ -94,18 +94,21 @@
   }
 
   .gallery {
-    display: flex;
-    flex-direction: column;
-    justify-content:space-between;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content:space-between;
     background-color: $background-color-3;
-    padding: 1rem;
+    // padding: 1rem;
       &__title {
         @include header-section-text;
         font-weight: 600;
       }
-      &__image {
+      &__images {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         width: 100%;
-        padding-top: 1rem;
+        // padding-top: 1rem;
       }
   }
       

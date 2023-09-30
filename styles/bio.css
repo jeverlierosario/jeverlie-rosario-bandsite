@@ -117,20 +117,18 @@ address {
     padding: 0 0.5rem 0.5rem 1rem;
   }
   .gallery {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     background-color: #fafafa;
-    padding: 1rem;
   }
   .gallery__title {
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 600;
   }
-  .gallery__image {
+  .gallery__images {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 100%;
-    padding-top: 1rem;
   }
   .footer {
     background-color: #323232;
