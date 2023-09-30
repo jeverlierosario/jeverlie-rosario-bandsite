@@ -19,6 +19,7 @@
       justify-content: space-around;
       padding: 0.125rem;
       color: $text-color-3;
+      // MAKE HOVER MORE NOTICEABLE!!!//
       &:hover {
         color:#ffffff;
       }
@@ -37,8 +38,7 @@
     background-size: cover;
     background-position: center;
     color: $text-color-2;
-    height: 30vh;
-    padding: 0rem 3rem;
+    padding: 6rem 3rem;
     display: flex;
     align-items: center;
     &__name {
@@ -155,29 +155,34 @@
     background-color: $background-color-1;
     display: flex;
     justify-content: space-between;
-    align-items: left;
+    align-items: center;
     padding: 1rem;
     color: $text-color-2;
     &__logo {
-      @include section-text-wider;
+      @include header-section-text;
       text-transform: uppercase;
-
     }
-    .nav__link > a {
+    .nav__link {
+      list-style: none;
+      margin-right: 10rem;
+      padding-right: 2rem;
       display: flex;
-      justify-content: space-between;
-      padding: 0 5rem;
-      color: $text-color-3;
-      &:hover {
-        color:#ffffff;
-      }
-      &--active {
-        color: #ffffff;
+      align-items: center; 
+      gap: 2rem; 
+  
+      .nav__link--active {
         font-weight: bold;
         border-bottom: 5px solid #ffffff;
         padding-bottom: 1rem;
+      }
+      a {
+        text-decoration: none;
+        color: $text-color-3;
+        &:hover {
+          color: #ffffff;
         }
       }
+    }
   }
 
   .hero {
@@ -186,18 +191,17 @@
     background-size: cover;
     background-position: center;
     color: $text-color-2;
-    // padding: 6rem 5rem;
-    height: 30vh;
-    padding: 0rem 3rem;
+    // height: 30vh; //adjust height using padding and margins - check feedback!//
+    padding: 15rem 3rem;
     display: flex;
     align-items: center;
     &__name {
-      @include header-section-text;
+      @include header-text-wider;
       text-align: left;
       font-weight: 600;
       position: absolute;
-      top: 5rem;
-      left: 1rem;
+      top: 14rem;
+      left: 4rem;
     }
   &::before {
     content: "";
@@ -213,16 +217,20 @@
 
   .about {
   padding-top: 2rem;
-  margin: 0 1rem;
+  margin: 0 5rem;
     &__title {
-      @include header-section-text;
+      @include section-text-wider;
       font-weight: 600;
       padding-bottom: 1rem;
+      padding-left: 0;
     }
     &__image {
+      
       align-items: center;
       width: 100%;
-      padding-bottom: 1rem;
+      padding-top: 1rem;
+      padding-right: 5rem;
+
     }
     blockquote, p {
       @include subheader-text;
@@ -230,19 +238,35 @@
     }
 
   .band {
+    margin: 0 5rem;
     display: flex;
     flex-direction: column;
-    @include body-text;
+    @include body-text-wider;
     margin-right: 1rem;
     &__name {
-      // @include body-text;
+      @include subheader-text-wider;
       padding: 1rem;
+      font-size: 1.25rem;
       font-weight: 500;
     }  
+      .band__biography--container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1rem;
+        column-count: 2;
+        column-gap: 1rem;
+      }
       p {
-        // @include body-text;
+        @include body-text-wider;
         padding: 0 0.5rem 0.5rem 1rem;
+        flex-basis: calc(50% - 1rem);
+        margin-right: 1rem;
+        &:last-child {
+          margin-right: 0;
         }
+        }
+      } 
   }
 
   .gallery {
@@ -300,4 +324,3 @@
     padding-top: 1rem;
     }
   }
-}

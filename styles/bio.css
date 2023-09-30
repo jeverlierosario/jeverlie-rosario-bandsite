@@ -58,8 +58,7 @@ address {
     background-size: cover;
     background-position: center;
     color: #ffffff;
-    height: 30vh;
-    padding: 0rem 3rem;
+    padding: 6rem 3rem;
     display: flex;
     align-items: center;
   }
@@ -180,29 +179,34 @@ address {
     background-color: #323232;
     display: flex;
     justify-content: space-between;
-    align-items: left;
+    align-items: center;
     padding: 1rem;
     color: #ffffff;
   }
   .header__logo {
-    font-size: 2.25rem;
-    line-height: 2.75rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
     text-transform: uppercase;
   }
-  .header .nav__link > a {
+  .header .nav__link {
+    list-style: none;
+    margin-right: 10rem;
+    padding-right: 2rem;
     display: flex;
-    justify-content: space-between;
-    padding: 0 5rem;
-    color: #e1e1e1;
+    align-items: center;
+    gap: 2rem;
   }
-  .header .nav__link > a:hover {
-    color: #ffffff;
-  }
-  .header .nav__link > a--active {
-    color: #ffffff;
+  .header .nav__link .nav__link--active {
     font-weight: bold;
     border-bottom: 5px solid #ffffff;
     padding-bottom: 1rem;
+  }
+  .header .nav__link a {
+    text-decoration: none;
+    color: #e1e1e1;
+  }
+  .header .nav__link a:hover {
+    color: #ffffff;
   }
   .hero {
     position: relative;
@@ -210,19 +214,18 @@ address {
     background-size: cover;
     background-position: center;
     color: #ffffff;
-    height: 30vh;
-    padding: 0rem 3rem;
+    padding: 15rem 3rem;
     display: flex;
     align-items: center;
   }
   .hero__name {
-    font-size: 1.5rem;
-    line-height: 2rem;
+    font-size: 3.75rem;
+    line-height: 4.25rem;
     text-align: left;
     font-weight: 600;
     position: absolute;
-    top: 5rem;
-    left: 1rem;
+    top: 14rem;
+    left: 4rem;
   }
   .hero::before {
     content: "";
@@ -236,18 +239,20 @@ address {
   }
   .about {
     padding-top: 2rem;
-    margin: 0 1rem;
+    margin: 0 5rem;
   }
   .about__title {
-    font-size: 1.5rem;
-    line-height: 2rem;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
     font-weight: 600;
     padding-bottom: 1rem;
+    padding-left: 0;
   }
   .about__image {
     align-items: center;
     width: 100%;
-    padding-bottom: 1rem;
+    padding-top: 1rem;
+    padding-right: 5rem;
   }
   .about blockquote, .about p {
     font-size: 0.875rem;
@@ -255,75 +260,99 @@ address {
     font-weight: 600;
   }
   .band {
+    margin: 0 5rem;
     display: flex;
     flex-direction: column;
-    font-size: 0.813rem;
-    line-height: 1.125rem;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
     font-weight: 400;
     margin-right: 1rem;
   }
   .band__name {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
     padding: 1rem;
+    font-size: 1.25rem;
     font-weight: 500;
   }
-  .band p {
-    padding: 0 0.5rem 0.5rem 1rem;
-  }
-  .gallery {
+  .band .band__biography--container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
-    background-color: #fafafa;
-    padding: 1rem;
+    gap: 1rem;
+    -moz-column-count: 2;
+         column-count: 2;
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
   }
-  .gallery__title {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-weight: 600;
-  }
-  .gallery__image {
-    width: 100%;
-    padding-top: 1rem;
-  }
-  .footer {
-    background-color: #323232;
-    align-items: left;
-    padding: 2rem 1rem;
-    color: #ffffff;
-  }
-  .footer__social--title {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-weight: 600;
-  }
-  .footer .social__nav--list {
-    display: flex;
-    justify-content: left;
-    gap: 2rem;
-    padding: 1rem 0;
-  }
-  .footer .footer__contact {
-    font-size: 0.813rem;
-    line-height: 1.125rem;
+  .band p {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
     font-weight: 400;
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
+    padding: 0 0.5rem 0.5rem 1rem;
+    flex-basis: calc(50% - 1rem);
+    margin-right: 1rem;
   }
-  .footer .footer__contact--name {
-    padding-top: 1rem;
+  .band p:last-child {
+    margin-right: 0;
   }
-  .footer .footer__contact--address, .footer .footer__contact--email {
-    padding: 1rem 0;
-  }
-  .footer__logo {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    text-transform: uppercase;
-    padding-top: 2rem;
-  }
-  .footer__copyright {
-    font-size: 0.7rem;
-    padding-top: 1rem;
-  }
+}
+.gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fafafa;
+  padding: 1rem;
+}
+.gallery__title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+}
+.gallery__image {
+  width: 100%;
+  padding-top: 1rem;
+}
+
+.footer {
+  background-color: #323232;
+  align-items: left;
+  padding: 2rem 1rem;
+  color: #ffffff;
+}
+.footer__social--title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+}
+.footer .social__nav--list {
+  display: flex;
+  justify-content: left;
+  gap: 2rem;
+  padding: 1rem 0;
+}
+.footer .footer__contact {
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+.footer .footer__contact--name {
+  padding-top: 1rem;
+}
+.footer .footer__contact--address, .footer .footer__contact--email {
+  padding: 1rem 0;
+}
+.footer__logo {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+  padding-top: 2rem;
+}
+.footer__copyright {
+  font-size: 0.7rem;
+  padding-top: 1rem;
 }/*# sourceMappingURL=bio.css.map */
