@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    // box-sizing: border-box;
+    // border: border-box;
 }
 
 ul, ol {
@@ -20,4 +20,8 @@ a {
 
 body {
     font-family: "Avenir Next", sans-serif
+}
+
+address {
+    font-style: normal;
 }
