@@ -54,6 +54,63 @@ address {
     border-bottom: 5px solid #ffffff;
     padding-bottom: 1rem;
   }
+  .hero__album {
+    position: relative;
+    background-image: url("../assets/images/hero-shows.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    padding: 6rem 3rem;
+    display: flex;
+    align-items: center;
+    text-align: left;
+  }
+  .hero__album--name {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 600;
+    text-align: left;
+    font-weight: 400;
+    position: absolute;
+    top: 3rem;
+    left: 1rem;
+  }
+  .hero__album--song {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-align: left;
+    font-weight: 600;
+    position: absolute;
+    top: 5rem;
+    left: 1rem;
+  }
+  .concert__list--header {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+  }
+  .concert__list--item {
+    margin: 10px;
+    padding: 10pxl;
+  }
+  .concert__list--item .concert__list--date,
+  .concert__list--item .concert__list--venue,
+  .concert__list--item .concert__list--location {
+    font-size: 1rem;
+    color: #e1e1e1;
+    margin-bottom: 0.5rem;
+  }
+  .concert__list--item .concert__list--item p {
+    font-size: 1rem;
+    color: #323232;
+    margin-bottom: 0.5rem;
+  }
+  .concert__list--item .buyTickets {
+    background-color: #323232;
+    color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+  }
   .footer {
     background-color: #323232;
     align-items: left;
@@ -96,7 +153,7 @@ address {
     padding-top: 1rem;
   }
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 320px) and (max-width: 767px) and (min-width: 768px) and (max-width: 1279px) {
   .header {
     background-color: #323232;
     display: flex;
@@ -186,7 +243,7 @@ address {
     padding: 2rem 0 1rem 0;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 320px) and (max-width: 767px) and (min-width: 1280px) {
   .header {
     background-color: #323232;
     display: flex;
@@ -221,6 +278,8 @@ address {
     color: #ffffff;
     font-weight: bold;
   }
+}
+@media (min-width: 320px) and (max-width: 767px) {
   .footer {
     background-color: #323232;
     padding: 2rem;

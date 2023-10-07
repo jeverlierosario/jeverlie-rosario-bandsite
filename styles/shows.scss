@@ -31,9 +31,70 @@
       }
     }
   }
+
   //=====================
+  .hero__album {
+    position: relative;
+    background-image: url("../assets/images/hero-shows.jpg");
+    background-size: cover;
+    background-position: center;
+    color: $text-color-2;
+    padding: 6rem 3rem;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    &--name {
+      @include subheader-text;
+      text-align: left;
+      font-weight: 400;
+      position: absolute;
+      top: 3rem;
+      left: 1rem;
+    }
+    &--song {
+      @include header-section-text;
+      text-align: left;
+      font-weight: 600;
+      position: absolute;
+      top: 5rem;
+      left: 1rem;
+    }
+  }
 
 
+.concert__list--header {
+  @include header-section-text;
+  font-weight: 600;
+  // padding: 2rem, 4rem;
+
+}
+
+  .concert__list--item {
+    margin: 10px;
+    padding: 10pxl;
+  
+    .concert__list--date,
+    .concert__list--venue,
+    .concert__list--location {
+      font-size: 1rem;
+      color: $text-color-3;
+      margin-bottom: 0.5rem;
+    }
+  
+    .concert__list--item p {
+      font-size: 1rem;
+      color: $text-color-1;
+      margin-bottom: 0.5rem;
+    }
+  
+    .buyTickets {
+      background-color: $background-color-1;
+      color: $text-color-2;
+      border: 1px solid #ccc;
+      padding: 0.5rem;
+    }
+  }
+  
 
   //=====================
   .footer {
@@ -74,7 +135,7 @@
     padding-top: 1rem;
     }
   }
-}
+
 
 
 
@@ -212,8 +273,7 @@
       }
     }
   }
-    //=====================
-
+}//=====================
 
 
   //=====================
