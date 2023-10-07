@@ -1,5 +1,272 @@
-@use './partials/resets.scss' as *;
-@use './partials/variables' as *;
-@use './partials/mixins' as *;
+@use '../styles/partials/resets' as *;
+@use '../styles/partials/variables' as *;
+@use '../styles/partials/mixins' as *;
+
+//Mobile Styles
+@media (min-width: 320px) and (max-width: 767px) {
+  .header {
+    background-color: $background-color-1;
+    text-align: center;
+    padding: 1rem;
+    color: $text-color-2;
+    &__logo {
+      @include header-section-text;
+      text-transform: uppercase;
+    }
+    .nav__link {
+      display: flex;
+      justify-content: space-around;
+      padding: 0.125rem;
+      color: $text-color-3;
+      transition: color 0.2s ease;
+      &:hover {
+        color:#ffffff;
+        font-weight: bold;  //needs debugging - hover effect not working unless clicked//
+      }
+      &--active {
+        color: #ffffff;
+        font-weight: bold;
+        border-bottom: 5px solid #ffffff;
+        padding-bottom: 1rem;
+      }
+    }
+  }
+  //=====================
 
 
+
+  //=====================
+  .footer {
+    background-color: $background-color-1;
+    align-items: left;
+    padding: 2rem 1rem;
+    color: $text-color-2;
+      &__social--title {
+        @include header-section-text;
+        font-weight: 600;
+      }
+      .social__nav--list {
+        display: flex;
+        justify-content: left;
+        gap: 2rem;
+        padding: 1rem 0;
+      }
+    .footer__contact {
+      @include footer-text;
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      &--name {
+        padding-top: 1rem;
+      }
+      &--address,
+      &--email {
+        padding: 1rem 0;
+      }
+    }
+    &__logo {
+      @include header-section-text;
+      text-transform: uppercase;
+      padding-top: 2rem;
+    }
+    &__copyright {
+      font-size: 0.7rem;
+    padding-top: 1rem;
+    }
+  }
+}
+
+
+
+
+//Tablet Styles
+@media (min-width: 768px) and (max-width: 1279px) {
+  .header {
+    background-color: $background-color-1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1.5rem;
+    color: $text-color-2;
+    &__logo {
+      @include header-section-text;
+      text-transform: uppercase;
+      padding-right: 2rem;
+    }
+    .nav__link {
+      list-style: none;
+      margin-right: 10rem;
+      padding-right: 2rem;
+      display: flex;
+      gap: 2rem; 
+      padding-right: 2rem;
+      .nav__link--active {
+        font-weight: bold;
+        border-bottom: 7px solid #ffffff;
+        padding-bottom: 1.5rem;
+        a {
+          text-decoration: none;
+          color: $text-color-3;
+          transition: color 0.2s ease;
+          &:hover {
+            color: #ffffff;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+  //=====================
+
+
+
+  //=====================
+
+
+  .footer {
+    background-color: $background-color-1;
+    padding: 2rem;
+    color: $text-color-2;
+    position: relative;
+    &__social {
+      display: flex;
+      justify-content: flex-start;
+      gap: 1rem;
+      padding-bottom: 1rem;
+      &--title {
+        @include section-text-wider;
+        font-weight: 500;
+      }
+      .social__nav--list {
+        display: flex;
+        justify-content: left;
+        gap: 2rem;
+        padding-right: 1rem;
+        padding-top: 0.8rem;
+      }
+    }
+    .footer__contact {
+      @include footer-text-wider;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 2rem;
+      &--name {
+        padding-top: 2rem;
+      }
+      &--address,
+      &--email {
+        padding: 2rem 0;
+      }
+    }
+    &__logo {
+      @include section-text-wider;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+    }
+    &__copyright {
+      font-size: 1rem;
+      padding: 2rem 0 1rem 0;
+    }
+  }
+}
+
+
+
+
+//Destop Styles
+@media (min-width: 1280px) {
+  .header {
+    background-color: $background-color-1;
+    display: flex;
+    justify-content: flex-start;
+    padding: 1.5rem 4rem;
+    color: $text-color-2;
+    &__logo {
+      @include header-section-text;
+      text-transform: uppercase;
+      padding-right: 4rem;
+    }
+    .nav__link {
+      list-style: none;
+      padding-right: 2rem;
+      display: flex;
+      align-items: left; 
+      gap: 2rem; 
+      .nav__link--active {
+        font-weight: bold;
+        border-bottom: 8px solid #ffffff;
+        padding-bottom: 1.5rem;
+        a {
+          text-decoration: none;
+          color: $text-color-3;
+          transition: color 0.2s ease;
+          &:hover {
+            color: #ffffff;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+    //=====================
+
+
+
+  //=====================
+
+
+
+  .footer {
+    background-color: $background-color-1;
+    padding: 2rem;
+    color: $text-color-2;
+    position: relative;
+    &__social {
+      display: flex;
+      justify-content: flex-start;
+      gap: 1rem;
+      padding-bottom: 1rem;
+      &--title {
+        @include section-text-wider;
+        font-weight: 500;
+      }
+      .social__nav--list {
+        display: flex;
+        justify-content: left;
+        gap: 2rem;
+        padding-right: 1rem;
+        padding-top: 0.8rem;
+      }
+    }
+    .footer__contact {
+      @include footer-text-wider;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 2rem;
+      &--name {
+        padding-top: 2rem;
+      }
+      &--address,
+      &--email {
+        padding: 2rem 0;
+      }
+    }
+    &__logo {
+      @include section-text-wider;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      position: absolute;
+      top: 2rem;
+      right: 10rem;
+    }
+    &__copyright {
+      font-size: 1rem;
+      padding: 2rem 0 1rem 0;
+    }
+  }
+}
