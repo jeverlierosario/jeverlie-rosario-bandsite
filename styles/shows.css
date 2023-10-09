@@ -90,6 +90,9 @@ address {
     font-weight: 600;
     padding: 2rem;
   }
+  .concert__list--headings {
+    display: none;
+  }
   .concert__list--item {
     border-bottom: 1px solid #e1e1e1;
     padding: 0 1rem;
@@ -240,19 +243,44 @@ address {
     top: 5rem;
     left: 1rem;
   }
+  .concert__list {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
+    align-items: start;
+    padding: 0 2.25rem;
+    margin: 0 2.25rem;
+  }
   .concert__list--header {
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 600;
     padding: 2rem;
   }
+  .concert__list--headings {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: left;
+    padding: 3rem 11rem 2rem 0;
+    font-size: 0.813rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+    color: #afafaf;
+    text-transform: uppercase;
+  }
+  .concert__list--headings h3 {
+    text-transform: uppercase;
+    font-weight: 600;
+  }
   .concert__list--item {
     border-bottom: 1px solid #e1e1e1;
-    padding: 0 2.25rem;
-    margin: 0 2.25rem;
+    padding: 1.5rem;
     display: flex;
-    justify-content: space-between;
-    align-items: right;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: left;
   }
   .concert__list--item.selected {
     background-color: #fafafa;
@@ -264,12 +292,6 @@ address {
   .concert__list--item .concert__list--venue,
   .concert__list--item .concert__list--location {
     display: none;
-  }
-  .concert__list--item .concert__list--info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
   }
   .buyTickets {
     background-color: #323232;
