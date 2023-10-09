@@ -1,4 +1,3 @@
-//creating array of the concerts
 const concerts = [
   {
     date: "Mon Sept 06 2021",
@@ -10,72 +9,71 @@ const concerts = [
     venue: "Pier 3 East",
     location: "San Francisco, CA"
   },
-  {  
+  {
     date: "Fri Oct 15 2021",
     venue: "View Lounge",
     location: "San Francisco, CA"
   },
-  {  
+  {
     date: "Sat Nov 06 2021",
     venue: "Hyatt Agency",
     location: "San Francisco, CA"
   },
-  {  
+  {
     date: "Fri Nov 26 2021",
     venue: "Moscow Center",
     location: "San Francisco, CA"
   },
-  {  
+  {
     date: "Wed Dec 15 2021",
     venue: "Press Club",
     location: "San Francisco, CA"
   }
 ];
 
-//define function to create concert list use naming used li
-// //then create Elemnt append the header <h3>
-function createConcertItem(concert) {
-  const listItem = document.createElement("li");
-  listItem.classList.add("concert__list--item");
+function renderConcertList() {
+  const concertListContainer = document.getElementById("concertList");
 
-  // Create h3 elements for date, venue, and location
-  const h3Date = document.createElement("h3");
-  h3Date.classList.add("concert__list--date");
-  h3Date.innerText = "Date";
+  //  array and create list items dynamically
+  concerts.forEach(concert => {
+    const listItem = document.createElement("li");
+    listItem.classList.add("concert__list--item");
 
-  const h3Venue = document.createElement("h3");
-  h3Venue.classList.add("concert__list--venue");
-  h3Venue.innerText = "Venue";
+    // append the concert details to the list item
+    const dateElement = document.createElement("h3");
+    dateElement.classList.add("concert__list--date");
+    dateElement.innerText = "Date";
+    const dateValue = document.createElement("p");
+    dateValue.innerText = concert.date;
 
-  const h3Location = document.createElement("h3");
-  h3Location.classList.add("concert__list--location");
-  h3Location.innerText = "Location";
+    const venueElement = document.createElement("h3");
+    venueElement.classList.add("concert__list--venue");
+    venueElement.innerText = "Venue";
+    const venueValue = document.createElement("p");
+    venueValue.innerText = concert.venue;
 
-  listItem.appendChild(h3Date);
-  listItem.appendChild(h3Venue);
-  listItem.appendChild(h3Location);
+    const locationElement = document.createElement("h3");
+    locationElement.classList.add("concert__list--location");
+    locationElement.innerText = "Location";
+    const locationValue = document.createElement("p");
+    locationValue.innerText = concert.location;
 
-  // Create <p> elements for concert details
-  const pDate = document.createElement("p");
-  pDate.innerText = concert.date;
+    //append the "Buy Tickets" button
+    const buyTicketsButton = document.createElement("button");
+    buyTicketsButton.classList.add("buyTickets");
+    buyTicketsButton.innerText = "Buy Tickets";
 
-  const pVenue = document.createElement("p");
-  pVenue.innerText = concert.venue;
+    //append all elements to the list item
+    listItem.appendChild(dateElement);
+    listItem.appendChild(dateValue);
+    listItem.appendChild(venueElement);
+    listItem.appendChild(venueValue);
+    listItem.appendChild(locationElement);
+    listItem.appendChild(locationValue);
+    listItem.appendChild(buyTicketsButton);
 
-  const pLocation = document.createElement("p");
-  pLocation.innerText = concert.location;
-
-  listItem.appendChild(pDate);
-  listItem.appendChild(pVenue);
-  listItem.appendChild(pLocation);
-
-  // Create a "Buy Tickets" button
-  const buyTicketsButton = document.createElement("button");
-  buyTicketsButton.classList.add("buyTickets");
-  buyTicketsButton.innerText = "Buy Tickets";
-  listItem.appendChild(buyTicketsButton);
-
-  return listItem;
+    //append to the concert list container
+    concertListContainer.appendChild(listItem);
+  });
 }
-
-
+renderConcertList();

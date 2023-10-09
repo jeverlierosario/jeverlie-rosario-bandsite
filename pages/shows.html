@@ -11,7 +11,7 @@
     <h1 class="header__logo"><a href="index.html">Bandsite</a></h1>
     <nav class="header__nav">
         <ul class="nav__link">
-            <li><a href="index.html" class="nav__link">Biography</a></li>
+            <li><a href="../index.html" class="nav__link">Biography</a></li>
             <li><a href="../pages/shows.html" class="nav__link--active">Shows</a></li>
         </ul>
     </nav>
@@ -29,69 +29,15 @@
       src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1495304827&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
       </iframe> 
       <!-- <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/mackenzymackay" title="Mackenzy Mackay" target="_blank" style="color: #cccccc; text-decoration: none;">Mackenzy Mackay</a> · <a href="https://soundcloud.com/mackenzymackay/venus" title="Venus" target="_blank" style="color: #cccccc; text-decoration: none;">Venus</a></div> -->
+    </section>
 
-     
+    
+    <!-- Apply DOM/JS for concert list -->
+    <section class="concert__list">
+      <h2 class="concert__list--header">Shows</h2>
+      <ul class="concert__list--items" id="concertList"></ul>
+    </section>
 
-  </section class="concert__list">
-    <h2 class="concert__list--header">Shows</h2>
-    <!-- Shows List Container / something is wrong here, do I have to have all these info here if I have them as array in JS??-->
-    <ul class="concert__list--items" id="concertList">
-      <li class="concert__list--item">
-        <h3 class="concert__list--date">Date</h3>
-        <p>Mon Sept 06 2021</p>
-        <h3 class="concert__list--venue">Venue</h3>
-        <p>Ronald Lane</p>
-        <h3 class="concert__list--location">Location</h3>
-        <p>San Francisco, CA</p>
-        <button class="buyTickets">Buy Tickets</button>
-      </li>
-      <li class="concert__list--item">
-        <h3 class="concert__list--date">Date</h3>
-        <p>Tue Sept 21 2021</p>
-        <h3 class="concert__list--venue">Venue</h3>
-        <p>Pier 3 East </p>
-        <h3 class="concert__list--location">Location</h3>
-        <p>San Francisco, CA </p>
-        <button class="buyTickets">Buy Tickets</button>
-      <li>
-        <h3 class="concert__list--date">Date</h3>
-        <p>Fri Oct 15 2021</p>
-        <h3 class="concert__list--venue">Venue</h3>
-        <p>View Lounge</p>
-        <h3 class="concert__list--location">Location</h3>
-        <p>San Francisco, CA</p>
-        <button class="buyTickets">Buy Tickets</button>
-      </li>
-      <li class="concert__list--item">
-        <h3 class="concert__list--date">Date</h3>
-        <p>Sat Nov 06 2021</p>
-        <h3 class="concert__list--venue">Venue</h3>
-        <p>Hyatt Agency</p>
-        <div class="mobile-view">
-        <h3 class="concert__list--location">Location</h3>
-        <p>San Francisco, CA</p>
-        <button class="buyTickets">Buy Tickets</button>
-      </li>
-      <li class="concert__list--item">
-        <h3 class="concert__list--date">Date</h3>
-        <p>Fri Nov 26 2021</p>
-        <h3 class="concert__list--venue">Venue</h3>
-        <p>Moscow Center</p>
-        <h3 class="concert__list--location">Location</h3>
-        <p>San Francisco, CA</p>
-        <button class="buyTickets">Buy Tickets</button>
-      </li>
-      <li class="concert__list--item">
-        <h3 class="concert__list--date">Date</h3>
-        <p>Wed Dec 15 2021</p>
-        <h3 class="concert__list--venue">Venue</h3>
-        <p>Press Club</p>
-        <h3 class="concert__list--location">Location</h3>
-        <p>San Francisco, CA</p>
-        <button class="buyTickets">Buy Tickets</button>
-      </li>
-    </ul>
-  </section>
 
 </main>
 <footer class="footer">
