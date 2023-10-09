@@ -32,7 +32,6 @@
     }
   }
 
-  //=====================
   .hero__album {
     position: relative;
     background-image: url("../assets/images/hero-shows.jpg");
@@ -91,7 +90,7 @@
     .concert__list--venue,
     .concert__list--location {
       @include body-text;
-      color: $concert-subheadings-text;
+      color: $subheadings-text;
       padding: 1rem;
       // align-items: left;
       text-transform: uppercase;
@@ -242,7 +241,7 @@
     align-items: left;
     padding-right: 11rem;
     @include body-text;
-    color: $concert-subheadings-text;
+    color: $subheadings-text;
     text-transform: uppercase;
   }
   .concert__list--headings h3 {
@@ -416,7 +415,7 @@
     text-align: left;;
     padding: 3rem 11rem 2rem 0;
     @include body-text;
-    color: $concert-subheadings-text;
+    color: $subheadings-text;
     text-transform: uppercase;
   }
   .concert__list--headings h3 {

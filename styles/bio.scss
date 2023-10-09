@@ -117,7 +117,93 @@
       }
     }
   } 
-      
+  
+//////////////////////////
+
+
+  .comments__header {
+    @include header-section-text;
+    font-weight: 600;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .comment__form--items {
+    border-bottom: 1px solid $text-color-3;
+    padding: $mobile-margin; 
+    margin: $mobile-margin; 
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: left;
+  }
+
+  .comment__form--items > label {
+    color: $subheadings-text;
+    text-transform: uppercase;
+    padding: 0.5rem;
+  }
+  
+
+  /* CSS */
+.avatar-container {
+  width: 36px; /* Set the width to 36px */
+  height: 36px; /* Set the height to 36px */
+  border-radius: 50%; /* Apply border radius */
+  overflow: hidden; /* Hide overflow in case the image is larger than the container */
+  margin-right: 10px; /* Adjust the margin for spacing */
+}
+
+.avatar-image {
+  max-width: 200%; /* Ensure the image does not exceed the container's width */
+  max-height: 100%; /* Ensure the image does not exceed the container's height */
+}
+
+
+
+  
+  
+
+  .comment-name {
+    font-weight: 600;
+  }
+  .comment-header .comment-timestamp {
+    color: $subheadings-text;
+    text-align: right;
+  }
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/////////////////////////
+
+
   .footer {
     background-color: $background-color-1;
     align-items: left;

@@ -21,6 +21,9 @@ const commentForm = document.getElementById("comment-form");
 const nameInput = document.getElementById("name");
 const commentTextInput = document.getElementById("comment-text");
 
+const placeholderImagePath = "path_to_placeholder_image";
+
+
 function displayComment(comment) {
   const commentElement = document.createElement("div");
   commentElement.classList.add("comment");
@@ -28,15 +31,51 @@ function displayComment(comment) {
   const commentHeader = document.createElement("div");
   commentHeader.classList.add("comment-header");
 
+  // // Create and append the avatar image
+  // const commentAvatar = document.createElement("div");
+  // commentAvatar.classList.add("comment-avatar");
+
+  // const avatarImage = document.createElement("img");
+  // avatarImage.alt = "Avatar";
+  // avatarImage.style.maxWidth = "36px"; 
+  // avatarImage.style.maxHeight = "36px"; 
+  // avatarImage.style.borderRadius = "50%"; 
+  // if (comment.avatarPath) {
+  //   // Use the provided avatar image
+  //   avatarImage.src = comment.avatarPath;
+  // } else {
+  //   // Use a placeholder color (Mercury) when no image is provided
+  //   avatarImage.style.backgroundColor = "#E5E5E5";
+  // }
+
+  // commentAvatar.appendChild(avatarImage);
+  // commentHeader.appendChild(commentAvatar);
+
+// Create and append the avatar div with Mercury background
+const commentAvatar = document.createElement("div");
+commentAvatar.classList.add("comment-avatar");
+commentAvatar.style.backgroundColor = "#E5E5E5"; // Mercury background
+commentAvatar.style.width = "36px"; // Set width
+commentAvatar.style.height = "36px"; // Set height
+commentAvatar.style.borderRadius = "50%"; // Apply border radius
+commentHeader.appendChild(commentAvatar);
+
+
+
+
+
+
+
+  // Create and append the comment name
   const commentName = document.createElement("span");
   commentName.classList.add("comment-name");
   commentName.textContent = comment.name;
+  commentHeader.appendChild(commentName);
 
+  // Create and append the timestamp
   const commentTimestamp = document.createElement("span");
   commentTimestamp.classList.add("comment-timestamp");
   commentTimestamp.textContent = comment.timestamp;
-
-  commentHeader.appendChild(commentName);
   commentHeader.appendChild(commentTimestamp);
 
   const commentText = document.createElement("p");
@@ -47,6 +86,7 @@ function displayComment(comment) {
   commentElement.appendChild(commentText);
 
   commentsContainer.appendChild(commentElement);
+  commentElement.classList.add("comment__form--items");
 }
 
 function clearCommentForm() {
@@ -75,3 +115,7 @@ commentForm.addEventListener("submit", function (e) {
 
 // Display existing comments
 comments.forEach(displayComment);
+
+
+
+

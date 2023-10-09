@@ -50,16 +50,51 @@
                 <img src="./assets/images/Photo-gallery-9.jpg" alt="image 9" class="gallery__image"/>
             </div>
         </section>
+
+
+<!-- 
         <section class="comments-container">
-            <h2 class="Join the Conversation"></h2>
-            <form id="comment-form">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name">
+            <div class="comments__header--container">
+                <h2 class="comments__header">Join the Conversation</h2>
+            </div>
+            <div class="comment__form--container">
+                <form class="comment__form--items" id="comment-form"> 
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name">
+                    <label for="comment-text">Comment</label>
+                    <textarea id="comment-text" name="comment"></textarea>
+                    <input type="submit" value="Comment">
+                </form>
+            </div>
+        </section> -->
+
+        <section class="comments-container">
+            <div class="comments__header--container">
+              <h2 class="comments__header">Join the Conversation</h2>
+            </div>
+            <div class="comment__form--container">
+              <form class="comment__form--items" id="comment-form">
+                <!-- Avatar image -->
+                <div class="avatar-container">
+                  <img class="avatar-image" src="./assets/images/Mohan-muruge.jpg" alt="Avatar" />
+                </div>
+                <!-- Name label and input -->
+                <div class="name-container">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name">
+                </div>
+                <!-- Comment label and textarea -->
                 <label for="comment-text">Comment</label>
                 <textarea id="comment-text" name="comment"></textarea>
+                <!-- Submit button -->
                 <input type="submit" value="Comment">
-            </form>
-        </section>
+              </form>
+            </div>
+          </section>
+          
+
+
+
     </main>
     <footer class="footer">
        <div class="footer__social">
