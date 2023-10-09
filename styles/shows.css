@@ -210,6 +210,36 @@ address {
     color: #ffffff;
     font-weight: bold;
   }
+  .hero__album {
+    position: relative;
+    background-image: url("../assets/images/hero-shows.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    padding: 6rem 3rem;
+    display: flex;
+    align-items: center;
+    text-align: left;
+  }
+  .hero__album--name {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 600;
+    text-align: left;
+    font-weight: 400;
+    position: absolute;
+    top: 3rem;
+    left: 1rem;
+  }
+  .hero__album--song {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-align: left;
+    font-weight: 600;
+    position: absolute;
+    top: 5rem;
+    left: 1rem;
+  }
   .concert__list--header {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -222,7 +252,7 @@ address {
     margin: 0 2.25rem;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: right;
   }
   .concert__list--item.selected {
     background-color: #fafafa;
@@ -230,45 +260,29 @@ address {
   .concert__list--item:hover {
     background-color: #fafafa;
   }
-  .concert__list--item .concert__list--info {
-    display: flex;
-    flex-direction: column; /* Stack labels and values vertically */
-    align-items: flex-start; /* Align elements to the left */
+  .concert__list--item .concert__list--date,
+  .concert__list--item .concert__list--venue,
+  .concert__list--item .concert__list--location {
+    display: none;
   }
-  .concert__list--item .concert__list--detail {
+  .concert__list--item .concert__list--info {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 1rem;
-    text-transform: uppercase;
-  }
-  .concert__list--item .concert__list--detail h3 {
-    font-size: 0.813rem;
-    line-height: 1.125rem;
-    font-weight: 400;
-    color: #afafaf;
-  }
-  .concert__list--item .concert__list--detail .concert__list--value {
-    font-size: 0.813rem;
-    line-height: 1.125rem;
-    font-weight: 400;
-    color: #ffffff;
+    gap: 1rem;
   }
   .buyTickets {
     background-color: #323232;
     color: #ffffff;
     border: none;
-    padding: 0.5rem;
-    height: 2.5rem;
-    margin: 1rem 0;
+    padding: 0.25rem 0.5rem;
     border-radius: 0.25rem;
-    cursor: pointer;
-    width: 100%;
     text-align: center;
     font-size: 0.875rem;
     line-height: 1.375rem;
     font-weight: 600;
     text-transform: uppercase;
+    cursor: pointer;
   }
   .footer {
     background-color: #323232;
