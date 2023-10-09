@@ -244,11 +244,6 @@ address {
     left: 1rem;
   }
   .concert__list {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    -moz-column-gap: 2rem;
-         column-gap: 2rem;
-    align-items: start;
     padding: 0 2.25rem;
     margin: 0 2.25rem;
   }
@@ -261,9 +256,9 @@ address {
   .concert__list--headings {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    text-align: left;
-    padding: 3rem 11rem 2rem 0;
+    justify-content: space-around;
+    align-items: left;
+    padding-right: 11rem;
     font-size: 0.813rem;
     line-height: 1.125rem;
     font-weight: 400;
@@ -393,6 +388,99 @@ address {
   .header .nav__link .nav__link--active a:hover {
     color: #ffffff;
     font-weight: bold;
+  }
+  .hero__album {
+    position: relative;
+    background-image: url("../assets/images/hero-shows.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    padding: 6rem 3rem;
+    display: flex;
+    align-items: center;
+    text-align: left;
+  }
+  .hero__album--name {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 600;
+    text-align: left;
+    font-weight: 400;
+    position: absolute;
+    top: 3rem;
+    left: 1rem;
+  }
+  .hero__album--song {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-align: left;
+    font-weight: 600;
+    position: absolute;
+    top: 5rem;
+    left: 1rem;
+  }
+  .concert__list {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
+    align-items: start;
+    padding: 0 2.25rem;
+    margin: 0 2.25rem;
+  }
+  .concert__list--header {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    padding: 2rem;
+  }
+  .concert__list--headings {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: left;
+    padding: 3rem 11rem 2rem 0;
+    font-size: 0.813rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+    color: #afafaf;
+    text-transform: uppercase;
+  }
+  .concert__list--headings h3 {
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .concert__list--item {
+    border-bottom: 1px solid #e1e1e1;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: left;
+  }
+  .concert__list--item.selected {
+    background-color: #fafafa;
+  }
+  .concert__list--item:hover {
+    background-color: #fafafa;
+  }
+  .concert__list--item .concert__list--date,
+  .concert__list--item .concert__list--venue,
+  .concert__list--item .concert__list--location {
+    display: none;
+  }
+  .buyTickets {
+    background-color: #323232;
+    color: #ffffff;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    text-align: center;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
   }
   .footer {
     background-color: #323232;
