@@ -95,10 +95,6 @@
       text-transform: uppercase;
     }
 
-    // ul > li {
-    //   text-align: left;
-    // }
-
     .buyTickets {
       background-color: $background-color-1; 
       color: $text-color-2; 
@@ -201,7 +197,76 @@
   }
   //=====================
 
+  .concert__list--header {
+    @include header-section-text;
+    font-weight: 600;
+    padding: 2rem;
+  }
 
+  .concert__list--item {
+    border-bottom: 1px solid $text-color-3;
+    padding: $tablet-margin;
+    margin: $tablet-margin;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &.selected {
+      background-color: $background-color-3; 
+    }
+
+    &:hover {
+      background-color: $background-color-3;
+    }
+
+    // .concert__list--venue,
+    // .concert__list--location {
+    //   @include body-text;
+    //   color: $concert-subheadings-text;
+    //   padding: 1rem;
+    //   // align-items: left;
+    //   text-transform: uppercase;
+    // }
+
+    .concert__list--info {
+      display: flex;
+      flex-direction: column; /* Stack labels and values vertically */
+      align-items: flex-start; /* Align elements to the left */
+    }
+
+    .concert__list--detail {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1rem;
+      text-transform: uppercase;
+
+      h3 {
+        @include body-text;
+        color: $concert-subheadings-text;
+      }
+
+      .concert__list--value {
+        @include body-text;
+        color: $text-color-2;
+      }
+    }
+  }
+
+  .buyTickets {
+    background-color: $background-color-1;
+    color: $text-color-2;
+    border: none;
+    padding: 0.5rem;
+    height: 2.5rem;
+    margin: 1rem 0;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    @include subheader-text;
+    text-transform: uppercase;
+  }
 
   //=====================
 
@@ -259,7 +324,7 @@
 
 
 
-
+////////////////////
 //Destop Styles
 @media (min-width: 1280px) {
   .header {
@@ -295,13 +360,6 @@
       }
     }
   }
-//=====================
-
-
-  //=====================
-
-
-
   .footer {
     background-color: $background-color-1;
     padding: 2rem;
