@@ -60,8 +60,9 @@ address {
     background-size: cover;
     background-position: center;
     color: #ffffff;
-    padding: 6rem 3rem;
+    padding: 5rem 3rem;
     display: flex;
+    justify-content: flex-start;
     align-items: center;
     text-align: left;
   }
@@ -74,6 +75,7 @@ address {
     position: absolute;
     top: 3rem;
     left: 1rem;
+    padding-right: 4rem;
   }
   .hero__album--song {
     font-size: 1.5rem;
@@ -83,6 +85,12 @@ address {
     position: absolute;
     top: 5rem;
     left: 1rem;
+    padding-right: 5rem;
+    padding-bottom: 5rem;
+  }
+  .hero__album iframe {
+    padding-top: 5rem;
+    align-self: left;
   }
   .concert__list--header {
     font-size: 1.5rem;
@@ -219,10 +227,11 @@ address {
     background-size: cover;
     background-position: center;
     color: #ffffff;
-    padding: 6rem 3rem;
+    padding: 5rem 3rem;
     display: flex;
-    align-items: center;
-    text-align: left;
+    flex-direction: column; /* Arrange children in a column */
+    justify-content: flex-start; /* Align children from the top */
+    align-items: flex-start; /* Align children from the left */
   }
   .hero__album--name {
     font-size: 0.875rem;
@@ -230,18 +239,19 @@ address {
     font-weight: 600;
     text-align: left;
     font-weight: 400;
-    position: absolute;
-    top: 3rem;
-    left: 1rem;
+    padding-top: 2rem;
   }
   .hero__album--song {
     font-size: 1.5rem;
     line-height: 2rem;
     text-align: left;
     font-weight: 600;
-    position: absolute;
-    top: 5rem;
-    left: 1rem;
+    padding-top: 2rem; /* Add margin to separate name and song */
+  }
+  .hero__album iframe {
+    padding-bottom: 5rem; /* Add padding to separate song and iframe */
+    margin-left: auto; /* Move iframe to the right using margin */
+    width: 50%; /* Adjust width as needed */
   }
   .concert__list {
     padding: 0 2.25rem;
@@ -395,10 +405,11 @@ address {
     background-size: cover;
     background-position: center;
     color: #ffffff;
-    padding: 6rem 3rem;
+    padding: 5rem 3rem;
     display: flex;
-    align-items: center;
-    text-align: left;
+    flex-direction: column; /* Arrange children in a column */
+    justify-content: flex-start; /* Align children from the top */
+    align-items: flex-start; /* Align children from the left */
   }
   .hero__album--name {
     font-size: 0.875rem;
@@ -406,18 +417,19 @@ address {
     font-weight: 600;
     text-align: left;
     font-weight: 400;
-    position: absolute;
-    top: 3rem;
-    left: 1rem;
+    padding-top: 2rem;
   }
   .hero__album--song {
     font-size: 1.5rem;
     line-height: 2rem;
     text-align: left;
     font-weight: 600;
-    position: absolute;
-    top: 5rem;
-    left: 1rem;
+    padding-top: 2rem; /* Add margin to separate name and song */
+  }
+  .hero__album iframe {
+    padding-bottom: 5rem; /* Add padding to separate song and iframe */
+    margin-left: auto; /* Move iframe to the right using margin */
+    width: 50%; /* Adjust width as needed */
   }
   .concert__list {
     display: grid;

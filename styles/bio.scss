@@ -140,18 +140,13 @@
 
   .comment__form--items {
     border-bottom: 1px solid $text-color-3;
-    padding: $mobile-margin;
+    padding: 1rem;
     margin: $mobile-margin;
     display: flex;
     flex-direction: column; 
+    justify-content: space-evenly;
     align-items: left;
   }
-
-  // .input-container {
-  //   display: flex;
-  //   flex-direction: column; 
-  //   margin-bottom: 1rem;
-  // }
 
   .input-container label {
     color: $subheadings-text;
@@ -165,29 +160,24 @@
   .input-container input[type="text"],
   .input-container textarea {
     width: 100%;
-    height: 36px; /* Set the height to 36px for Name */
-    padding: 0.5rem; /* Add padding */
-    border: 1px solid #E5E5E5; /* Default border color (Mercury) */
-    border-radius: 4px; /* Apply border radius */
+    padding: 0.5rem ; 
+    margin: auto;
+    border: 1px solid #E5E5E5; 
+    border-radius: 4px; 
+    text-align: center;
+    background-color: $background-color-3;
   }
-    &.input-name {
-    height: 1rem;
-  }
 
-
-
-
-  /* Styles for active state */
   .input-container input[type="text"]:focus,
   .input-container textarea:focus {
-    border: 1px solid #000; /* Black border color for active state */
-    outline: none; /* Remove the default focus outline */
+    border: 1px solid #000; 
+    outline: none; 
   }
 
-  /* Styles for error state */
+  
   .input-container.error input[type="text"],
   .input-container.error textarea {
-    border: 1px solid #d22d2d; /* Red border color for error state */
+    border: 1px solid #d22d2d; 
   }
 
   .avatar-container {
@@ -212,6 +202,20 @@
     text-align: right;
   }
 
+  .comment-button {
+    background-color: $background-color-1; 
+    color: $text-color-2; 
+    border: none;
+    padding: 0.5rem; 
+    height: 2.5rem; 
+    margin: 1rem 0;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    width: 100%; 
+    text-align: center;
+    @include subheader-text; 
+    text-transform: uppercase;
+  }
 
 
 
@@ -404,6 +408,105 @@
     }
   }
 
+
+  .comments__header {
+    @include header-section-text;
+    font-weight: 600;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .comment__form--items {
+    border-bottom: 1px solid $text-color-3;
+    padding: 3rem 12rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-evenly;
+    align-items: left;
+  }
+
+  .input-container label {
+    color: $subheadings-text;
+    text-transform: uppercase;
+    font-weight: 600;
+    // margin-bottom: 0.5rem; 
+    padding-bottom: 2rem;
+  }
+
+
+  .input-container input[type="text"],
+  .input-container textarea {
+    width: 100%;
+    padding: 1rem ; 
+    margin: auto;
+    border: 1px solid #E5E5E5; 
+    border-radius: 4px; 
+    text-align: center;
+    background-color: $background-color-3;
+  }
+
+  .input-container input[type="text"]:focus,
+  .input-container textarea:focus {
+    border: 1px solid #000; 
+    outline: none; 
+  }
+
+  
+  .input-container.error input[type="text"],
+  .input-container.error textarea {
+    border: 1px solid #d22d2d; 
+  }
+
+  .avatar-container {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+  }
+
+  .avatar-image {
+    max-width: 200%;
+    max-height: 100%;
+  }
+
+  .comment-name {
+    font-weight: 600;
+  }
+
+  .comment-header .comment-timestamp {
+    color: $subheadings-text;
+    text-align: right;
+  }
+
+  .comment-button {
+    background-color: $background-color-1; 
+    color: $text-color-2; 
+    border: none;
+    padding: 0.5rem; 
+    height: 2.5rem; 
+    margin: 1rem 0;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    width: 100%; 
+    text-align: center;
+    @include subheader-text; 
+    text-transform: uppercase;
+  }
+
+
+
+
+
+
+
+
+
+
+
   .footer {
     background-color: $background-color-1;
     padding: 2rem;
@@ -594,6 +697,105 @@
       }
     }
   }
+
+
+  .comments__header {
+    @include header-section-text;
+    font-weight: 600;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .comment__form--items {
+    border-bottom: 1px solid $text-color-3;
+    padding: 3rem 12rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-evenly;
+    align-items: left;
+  }
+
+  .input-container label {
+    color: $subheadings-text;
+    text-transform: uppercase;
+    font-weight: 600;
+    // margin-bottom: 0.5rem; 
+    padding-bottom: 2rem;
+  }
+
+
+  .input-container input[type="text"],
+  .input-container textarea {
+    width: 100%;
+    padding: 1rem ; 
+    margin: auto;
+    border: 1px solid #E5E5E5; 
+    border-radius: 4px; 
+    text-align: center;
+    background-color: $background-color-3;
+  }
+
+  .input-container input[type="text"]:focus,
+  .input-container textarea:focus {
+    border: 1px solid #000; 
+    outline: none; 
+  }
+
+  
+  .input-container.error input[type="text"],
+  .input-container.error textarea {
+    border: 1px solid #d22d2d; 
+  }
+
+  .avatar-container {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+  }
+
+  .avatar-image {
+    max-width: 200%;
+    max-height: 100%;
+  }
+
+  .comment-name {
+    font-weight: 600;
+  }
+
+  .comment-header .comment-timestamp {
+    color: $subheadings-text;
+    text-align: right;
+  }
+
+  .comment-button {
+    background-color: $background-color-1; 
+    color: $text-color-2; 
+    border: none;
+    padding: 0.5rem; 
+    height: 2.5rem; 
+    margin: 1rem 0;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    width: 100%; 
+    text-align: center;
+    @include subheader-text; 
+    text-transform: uppercase;
+  }
+
+
+
+
+
+
+
+
+
+
 
   .footer {
     background-color: $background-color-1;

@@ -152,16 +152,12 @@ address {
   }
   .comment__form--items {
     border-bottom: 1px solid #e1e1e1;
-    padding: 0 1rem;
+    padding: 1rem;
     margin: 0 1rem;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     align-items: left;
-  }
-  .input-container {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1rem;
   }
   .input-container label {
     color: #afafaf;
@@ -173,25 +169,21 @@ address {
   .input-container input[type=text],
   .input-container textarea {
     width: 100%;
-    height: 5rem; /* Set the height to 36px for Name */
-    padding: 0.5rem; /* Add padding */
-    border: 1px solid #E5E5E5; /* Default border color (Mercury) */
-    border-radius: 4px; /* Apply border radius */
+    padding: 0.5rem;
+    margin: auto;
+    border: 1px solid #E5E5E5;
+    border-radius: 4px;
+    text-align: center;
+    background-color: #fafafa;
   }
-  /* Updated styles for the input fields */
-  .input-container .input-name {
-    height: 1rem; /* Set the desired height, e.g., 30px */
-  }
-  /* Styles for active state */
   .input-container input[type=text]:focus,
   .input-container textarea:focus {
-    border: 1px solid #000; /* Black border color for active state */
-    outline: none; /* Remove the default focus outline */
+    border: 1px solid #000;
+    outline: none;
   }
-  /* Styles for error state */
   .input-container.error input[type=text],
   .input-container.error textarea {
-    border: 1px solid #d22d2d; /* Red border color for error state */
+    border: 1px solid #d22d2d;
   }
   .avatar-container {
     width: 36px;
@@ -210,6 +202,22 @@ address {
   .comment-header .comment-timestamp {
     color: #afafaf;
     text-align: right;
+  }
+  .comment-button {
+    background-color: #323232;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem;
+    height: 2.5rem;
+    margin: 1rem 0;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 600;
+    text-transform: uppercase;
   }
   .footer {
     background-color: #323232;
@@ -397,6 +405,83 @@ address {
   }
   .gallery__images .gallery__image:hover {
     filter: grayscale(0%);
+  }
+  .comments__header {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .comment__form--items {
+    border-bottom: 1px solid #e1e1e1;
+    padding: 3rem 12rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: left;
+  }
+  .input-container label {
+    color: #afafaf;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding-bottom: 2rem;
+  }
+  .input-container input[type=text],
+  .input-container textarea {
+    width: 100%;
+    padding: 1rem;
+    margin: auto;
+    border: 1px solid #E5E5E5;
+    border-radius: 4px;
+    text-align: center;
+    background-color: #fafafa;
+  }
+  .input-container input[type=text]:focus,
+  .input-container textarea:focus {
+    border: 1px solid #000;
+    outline: none;
+  }
+  .input-container.error input[type=text],
+  .input-container.error textarea {
+    border: 1px solid #d22d2d;
+  }
+  .avatar-container {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+  }
+  .avatar-image {
+    max-width: 200%;
+    max-height: 100%;
+  }
+  .comment-name {
+    font-weight: 600;
+  }
+  .comment-header .comment-timestamp {
+    color: #afafaf;
+    text-align: right;
+  }
+  .comment-button {
+    background-color: #323232;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem;
+    height: 2.5rem;
+    margin: 1rem 0;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 600;
+    text-transform: uppercase;
   }
   .footer {
     background-color: #323232;
@@ -595,6 +680,83 @@ address {
   }
   .gallery__images .gallery__image:hover {
     filter: grayscale(0%);
+  }
+  .comments__header {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .comment__form--items {
+    border-bottom: 1px solid #e1e1e1;
+    padding: 3rem 12rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: left;
+  }
+  .input-container label {
+    color: #afafaf;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding-bottom: 2rem;
+  }
+  .input-container input[type=text],
+  .input-container textarea {
+    width: 100%;
+    padding: 1rem;
+    margin: auto;
+    border: 1px solid #E5E5E5;
+    border-radius: 4px;
+    text-align: center;
+    background-color: #fafafa;
+  }
+  .input-container input[type=text]:focus,
+  .input-container textarea:focus {
+    border: 1px solid #000;
+    outline: none;
+  }
+  .input-container.error input[type=text],
+  .input-container.error textarea {
+    border: 1px solid #d22d2d;
+  }
+  .avatar-container {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+  }
+  .avatar-image {
+    max-width: 200%;
+    max-height: 100%;
+  }
+  .comment-name {
+    font-weight: 600;
+  }
+  .comment-header .comment-timestamp {
+    color: #afafaf;
+    text-align: right;
+  }
+  .comment-button {
+    background-color: #323232;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem;
+    height: 2.5rem;
+    margin: 1rem 0;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 600;
+    text-transform: uppercase;
   }
   .footer {
     background-color: #323232;

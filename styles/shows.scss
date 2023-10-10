@@ -32,14 +32,16 @@
     }
   }
 
+
   .hero__album {
     position: relative;
     background-image: url("../assets/images/hero-shows.jpg");
     background-size: cover;
     background-position: center;
     color: $text-color-2;
-    padding: 6rem 3rem;
+    padding: 5rem 3rem;
     display: flex;
+    justify-content: flex-start;
     align-items: center;
     text-align: left;
     &--name {
@@ -49,6 +51,8 @@
       position: absolute;
       top: 3rem;
       left: 1rem;
+      // margin-bottom: 1rem;
+      padding-right: 4rem;
     }
     &--song {
       @include header-section-text;
@@ -57,8 +61,15 @@
       position: absolute;
       top: 5rem;
       left: 1rem;
+      padding-right: 5rem;
+      padding-bottom: 5rem;
+    }
+    iframe {
+      padding-top: 5rem;
+      align-self: left;
     }
   }
+  
 
   .concert__list--header {
     @include header-section-text;
@@ -197,33 +208,46 @@
     }
   }
 
+
   .hero__album {
     position: relative;
     background-image: url("../assets/images/hero-shows.jpg");
     background-size: cover;
     background-position: center;
     color: $text-color-2;
-    padding: 6rem 3rem;
+    padding: 5rem 3rem;
     display: flex;
-    align-items: center;
-    text-align: left;
+    flex-direction: column; /* Arrange children in a column */
+    justify-content: flex-start; /* Align children from the top */
+    align-items: flex-start; /* Align children from the left */
+  
     &--name {
       @include subheader-text;
       text-align: left;
       font-weight: 400;
-      position: absolute;
-      top: 3rem;
-      left: 1rem;
+      padding-top: 2rem;
     }
+  
     &--song {
       @include header-section-text;
       text-align: left;
       font-weight: 600;
-      position: absolute;
-      top: 5rem;
-      left: 1rem;
+      // margin-top: 1rem;
+      padding-top: 2rem; /* Add margin to separate name and song */
+    }
+  
+    iframe {
+      padding-bottom: 5rem; /* Add padding to separate song and iframe */
+      margin-left: auto; /* Move iframe to the right using margin */
+      width: 50%; /* Adjust width as needed */
     }
   }
+  
+  
+  
+  
+
+
 
   .concert__list {
     padding: $tablet-margin;
@@ -373,25 +397,31 @@
     background-size: cover;
     background-position: center;
     color: $text-color-2;
-    padding: 6rem 3rem;
+    padding: 5rem 3rem;
     display: flex;
-    align-items: center;
-    text-align: left;
+    flex-direction: column; /* Arrange children in a column */
+    justify-content: flex-start; /* Align children from the top */
+    align-items: flex-start; /* Align children from the left */
+  
     &--name {
       @include subheader-text;
       text-align: left;
       font-weight: 400;
-      position: absolute;
-      top: 3rem;
-      left: 1rem;
+      padding-top: 2rem;
     }
+  
     &--song {
       @include header-section-text;
       text-align: left;
       font-weight: 600;
-      position: absolute;
-      top: 5rem;
-      left: 1rem;
+      // margin-top: 1rem;
+      padding-top: 2rem; /* Add margin to separate name and song */
+    }
+  
+    iframe {
+      padding-bottom: 5rem; /* Add padding to separate song and iframe */
+      margin-left: auto; /* Move iframe to the right using margin */
+      width: 50%; /* Adjust width as needed */
     }
   }
 
