@@ -229,9 +229,9 @@ address {
     color: #ffffff;
     padding: 5rem 3rem;
     display: flex;
-    flex-direction: column; /* Arrange children in a column */
-    justify-content: flex-start; /* Align children from the top */
-    align-items: flex-start; /* Align children from the left */
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
   .hero__album--name {
     font-size: 0.875rem;
@@ -246,12 +246,12 @@ address {
     line-height: 2rem;
     text-align: left;
     font-weight: 600;
-    padding-top: 2rem; /* Add margin to separate name and song */
+    padding-top: 2rem;
   }
   .hero__album iframe {
-    padding-bottom: 5rem; /* Add padding to separate song and iframe */
-    margin-left: auto; /* Move iframe to the right using margin */
-    width: 50%; /* Adjust width as needed */
+    padding-bottom: 5rem;
+    margin-left: auto;
+    width: 50%;
   }
   .concert__list {
     padding: 0 2.25rem;
@@ -407,9 +407,9 @@ address {
     color: #ffffff;
     padding: 5rem 3rem;
     display: flex;
-    flex-direction: column; /* Arrange children in a column */
-    justify-content: flex-start; /* Align children from the top */
-    align-items: flex-start; /* Align children from the left */
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
   .hero__album--name {
     font-size: 0.875rem;
@@ -424,12 +424,12 @@ address {
     line-height: 2rem;
     text-align: left;
     font-weight: 600;
-    padding-top: 2rem; /* Add margin to separate name and song */
+    padding-top: 2rem;
   }
   .hero__album iframe {
-    padding-bottom: 5rem; /* Add padding to separate song and iframe */
-    margin-left: auto; /* Move iframe to the right using margin */
-    width: 50%; /* Adjust width as needed */
+    padding-bottom: 5rem;
+    margin-left: auto;
+    width: 50%;
   }
   .concert__list {
     display: grid;

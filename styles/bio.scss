@@ -22,7 +22,7 @@
       transition: color 0.2s ease;
       &:hover {
         color:#ffffff;
-        font-weight: bold;  //needs debugging - hover effect not working unless clicked//
+        font-weight: bold; 
       }
       &--active {
         color: #ffffff;
@@ -119,16 +119,6 @@
   } 
   
 
-
-
-
-
-
-
-
-
-
-
   .comments__header {
     @include header-section-text;
     font-weight: 600;
@@ -156,7 +146,6 @@
     padding: 0.75rem;
   }
 
-
   .input-container input[type="text"],
   .input-container textarea {
     width: 100%;
@@ -180,6 +169,7 @@
     border: 1px solid #d22d2d; 
   }
 
+  //Align avatar to left of label name - needs fixing
   .avatar-container {
     width: 36px;
     height: 36px;
@@ -216,17 +206,7 @@
     @include subheader-text; 
     text-transform: uppercase;
   }
-
-
-
-
-
-
-
-
-
-
-
+  // Border/line should not span full width - needs fixing
 
   .footer {
     background-color: $background-color-1;
@@ -267,8 +247,6 @@
     }
   }
 }
-
-
 
 
 //Tablet Styles
@@ -408,7 +386,6 @@
     }
   }
 
-
   .comments__header {
     @include header-section-text;
     font-weight: 600;
@@ -435,7 +412,6 @@
     // margin-bottom: 0.5rem; 
     padding-bottom: 2rem;
   }
-
 
   .input-container input[type="text"],
   .input-container textarea {
@@ -497,16 +473,6 @@
     text-transform: uppercase;
   }
 
-
-
-
-
-
-
-
-
-
-
   .footer {
     background-color: $background-color-1;
     padding: 2rem;
@@ -557,9 +523,6 @@
     }
   }
 }
-
-
-
 
 //Destop Styles
 @media (min-width: 1280px) {
@@ -698,7 +661,6 @@
     }
   }
 
-
   .comments__header {
     @include header-section-text;
     font-weight: 600;
@@ -787,16 +749,6 @@
     text-transform: uppercase;
   }
 
-
-
-
-
-
-
-
-
-
-
   .footer {
     background-color: $background-color-1;
     padding: 2rem;
@@ -847,3 +799,5 @@
     }
   }
 }
+
+//NEEDS FIXING - DRY!!!!

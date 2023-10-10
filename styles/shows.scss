@@ -32,7 +32,6 @@
     }
   }
 
-
   .hero__album {
     position: relative;
     background-image: url("../assets/images/hero-shows.jpg");
@@ -51,7 +50,6 @@
       position: absolute;
       top: 3rem;
       left: 1rem;
-      // margin-bottom: 1rem;
       padding-right: 4rem;
     }
     &--song {
@@ -70,7 +68,6 @@
     }
   }
   
-
   .concert__list--header {
     @include header-section-text;
     font-weight: 600;
@@ -79,7 +76,6 @@
   .concert__list--headings {
     display: none;
   }
-  
   .concert__list--item {
     border-bottom: 1px solid $text-color-3;
     padding: $mobile-margin; 
@@ -88,15 +84,12 @@
     justify-content: left;
     flex-direction: column;
     align-items: left;
-
     &.selected {
       background-color: $background-color-3; 
     }
-    
     &:hover {
       background-color: $background-color-3; 
     }
-    
     .concert__list--date,
     .concert__list--venue,
     .concert__list--location {
@@ -106,7 +99,6 @@
       // align-items: left;
       text-transform: uppercase;
     }
-
     .buyTickets {
       background-color: $background-color-1; 
       color: $text-color-2; 
@@ -123,9 +115,6 @@
     }
   }
 
-
-
-  //=====================
   .footer {
     background-color: $background-color-1;
     align-items: left;
@@ -208,7 +197,6 @@
     }
   }
 
-
   .hero__album {
     position: relative;
     background-image: url("../assets/images/hero-shows.jpg");
@@ -217,9 +205,9 @@
     color: $text-color-2;
     padding: 5rem 3rem;
     display: flex;
-    flex-direction: column; /* Arrange children in a column */
-    justify-content: flex-start; /* Align children from the top */
-    align-items: flex-start; /* Align children from the left */
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: flex-start; 
   
     &--name {
       @include subheader-text;
@@ -232,23 +220,16 @@
       @include header-section-text;
       text-align: left;
       font-weight: 600;
-      // margin-top: 1rem;
-      padding-top: 2rem; /* Add margin to separate name and song */
+      padding-top: 2rem; 
     }
   
     iframe {
-      padding-bottom: 5rem; /* Add padding to separate song and iframe */
-      margin-left: auto; /* Move iframe to the right using margin */
-      width: 50%; /* Adjust width as needed */
+      padding-bottom: 5rem; 
+      margin-left: auto; 
+      width: 50%; 
     }
   }
   
-  
-  
-  
-
-
-
   .concert__list {
     padding: $tablet-margin;
     margin: $tablet-margin;
@@ -355,6 +336,7 @@
 
 
 
+
 //Destop Styles
 @media (min-width: 1280px) {
   .header {
@@ -399,29 +381,25 @@
     color: $text-color-2;
     padding: 5rem 3rem;
     display: flex;
-    flex-direction: column; /* Arrange children in a column */
-    justify-content: flex-start; /* Align children from the top */
-    align-items: flex-start; /* Align children from the left */
-  
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: flex-start; 
     &--name {
       @include subheader-text;
       text-align: left;
       font-weight: 400;
       padding-top: 2rem;
     }
-  
     &--song {
       @include header-section-text;
       text-align: left;
       font-weight: 600;
-      // margin-top: 1rem;
-      padding-top: 2rem; /* Add margin to separate name and song */
+      padding-top: 2rem;
     }
-  
     iframe {
-      padding-bottom: 5rem; /* Add padding to separate song and iframe */
-      margin-left: auto; /* Move iframe to the right using margin */
-      width: 50%; /* Adjust width as needed */
+      padding-bottom: 5rem; 
+      margin-left: auto; 
+      width: 50%; 
     }
   }
 
@@ -482,6 +460,7 @@
     text-transform: uppercase;
     cursor: pointer;
   }
+  
   .footer {
     background-color: $background-color-1;
     padding: 2rem;
@@ -532,3 +511,6 @@
     }
   }
 }
+
+
+//NEEDS FIXING - DRY!!!!

@@ -34,12 +34,12 @@ const concerts = [
 function renderConcertList() {
   const concertListContainer = document.getElementById("concertList");
 
-  //  array and create list items dynamically
+
   concerts.forEach(concert => {
     const listItem = document.createElement("li");
     listItem.classList.add("concert__list--item");
 
-    // append the concert details to the list item
+
     const dateElement = document.createElement("h3");
     dateElement.classList.add("concert__list--date");
     dateElement.innerText = "Date";
@@ -58,12 +58,12 @@ function renderConcertList() {
     const locationValue = document.createElement("p");
     locationValue.innerText = concert.location;
 
-    //append the "Buy Tickets" button
+ 
     const buyTicketsButton = document.createElement("button");
     buyTicketsButton.classList.add("buyTickets");
     buyTicketsButton.innerText = "Buy Tickets";
 
-    //append all elements to the list item
+
     listItem.appendChild(dateElement);
     listItem.appendChild(dateValue);
     listItem.appendChild(venueElement);
@@ -72,9 +72,11 @@ function renderConcertList() {
     listItem.appendChild(locationValue);
     listItem.appendChild(buyTicketsButton);
 
-    //append to the concert list container
+
     concertListContainer.appendChild(listItem);
   });
 }
 renderConcertList();
+
+
 
