@@ -1,3 +1,15 @@
+
+const leeApiKey = ?api_key=ad84ec4e-4017-4519-9ec4-26eef3e0327c;
+
+
+
+
+
+
+
+
+
+
 const comments = [
   {
     name: "Connor Walton",
@@ -16,12 +28,12 @@ const comments = [
   },
 ]
 
-const commentsContainer = document.querySelector(".comments-container");
+const commentsContainer = document.querySelector(".comments-display");
 const commentForm = document.getElementById("comment-form");
 const nameInput = document.getElementById("name");
 const commentTextInput = document.getElementById("comment-text");
 
-const placeholderImagePath = "path_to_placeholder_image";
+// const placeholderImagePath = "path_to_placeholder_image";
 
 
 function displayComment(comment) {
@@ -59,7 +71,8 @@ function displayComment(comment) {
   commentElement.appendChild(commentText);
 
   commentsContainer.appendChild(commentElement);
-  commentElement.classList.add("comment__form--items");
+  // commentElement.classList.add("comment__form--items");
+  commentsContainer.insertBefore(commentElement, commentsContainer.firstChild);
 }
 
 function clearCommentForm() {
@@ -79,11 +92,12 @@ commentForm.addEventListener("submit", function (e) {
       timestamp,
       message,
     };
-
-    //New comments not showing up - needs fixing
+    //push new comment to the comments array
     comments.push(newComment);
-    displayComment(newComment);
-    clearCommentForm();
+    //New comments not showing up - needs fixing
+  commentsContainer.innerHTML = "";
+  comments.forEach(displayComment);
+  clearCommentForm();
   }
 });
 
