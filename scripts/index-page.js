@@ -1,13 +1,6 @@
-
+import {BandSiteSPI} from "./band-site-api";
 const leeAPIKey = "?api_key=ad84ec4e-4017-4519-9ec4-26eef3e0327c";
 const bandSiteAPI = new BandSiteAPI(leeAPIKey);
-
-
-
-
-
-
-
 
 
 const comments = [
