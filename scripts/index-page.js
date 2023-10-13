@@ -1,6 +1,7 @@
-import {BandSiteSPI} from "./band-site-api";
-const leeAPIKey = "?api_key=ad84ec4e-4017-4519-9ec4-26eef3e0327c";
-const bandSiteAPI = new BandSiteAPI(leeAPIKey);
+// import {BandSiteSPI} from "./band-site-api";
+
+// const leeAPIKey = "?api_key=ad84ec4e-4017-4519-9ec4-26eef3e0327c";
+// const bandSiteAPI = new BandSiteAPI(leeAPIKey);
 
 
 const comments = [
@@ -85,6 +86,7 @@ commentForm.addEventListener("submit", function (e) {
       timestamp,
       message,
     };
+
     //push new comment to the comments array
     comments.push(newComment);
     //New comments not showing up - needs fixing
