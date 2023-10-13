@@ -45,12 +45,10 @@ function displayComment(comment) {
   commentAvatar.style.borderRadius = "50%"; 
   commentHeader.appendChild(commentAvatar);
 
-
   const commentName = document.createElement("span");
   commentName.classList.add("comment-name");
   commentName.textContent = comment.name;
   commentHeader.appendChild(commentName);
-
 
   const commentTimestamp = document.createElement("span");
   commentTimestamp.classList.add("comment-timestamp");
@@ -64,10 +62,26 @@ function displayComment(comment) {
   commentElement.appendChild(commentHeader);
   commentElement.appendChild(commentText);
 
-  commentsContainer.appendChild(commentElement);
+  // commentsContainer.appendChild(commentElement);
   // commentElement.classList.add("comment__form--items");
   commentsContainer.insertBefore(commentElement, commentsContainer.firstChild);
 }
+
+//fetch comments from the API
+async function fetchAndDisplayComments() {
+  try{
+    const comments = await BandSiteAPI.getcomments();
+    commentsContainer.textContent = ''; //this shoudl clear the existing comments - fingers crosed !!
+    comments.forEach(comment => displayComment(comment));
+  }catch(error) {
+    console.log(error);
+  }
+  
+}
+
+fetchAndDisplayComments();
+
+
 
 function clearCommentForm() {
   nameInput.value = "";
@@ -87,16 +101,29 @@ commentForm.addEventListener("submit", function (e) {
       message,
     };
 
-    //push new comment to the comments array
-    comments.push(newComment);
-    //New comments not showing up - needs fixing
-  commentsContainer.innerHTML = "";
-  comments.forEach(displayComment);
-  clearCommentForm();
-  }
-});
 
-comments.forEach(displayComment);
+
+
+
+
+
+
+
+
+
+
+
+    
+//     //push new comment to the comments array
+//     comments.push(newComment);
+//     //New comments not showing up - needs fixing
+//   commentsContainer.innerHTML = "";
+//   comments.forEach(displayComment);
+//   clearCommentForm();
+//   }
+// });
+
+// comments.forEach(displayComment);
 
 
 
