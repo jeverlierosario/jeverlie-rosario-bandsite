@@ -1,9 +1,13 @@
-// import {BandSiteSPI} from "./band-site-api";
+// instead of hard coding the array we need to use out band-site-api file, to help us
+// let's import it (like we did on the index page) and then make a new instance of it i.e. api = new BandSiteAPI(KEY)
+// after that we can use the api.getShows() and save that in the concerts variable
 
-// const leeAPIKey = "?api_key=ad84ec4e-4017-4519-9ec4-26eef3e0327c";
-// const bandSiteAPI = new BandSiteAPI(leeAPIKey);
+import {BandSiteAPI} from "./band-site-api.js";
 
+const APIKey = "ad84ec4e-4017-4519-9ec4-26eef3e0327c";
+const api = new BandSiteAPI(APIKey);
 
+const comments = await api.getShows();
 
 const concerts = [
   {
@@ -38,10 +42,10 @@ const concerts = [
   }
 ];
 
-
-const concertListContainer = document.getElementById("concertList");
-
 function renderConcertList() {
+  const concertListContainer = document.getElementById("concertList");
+
+
   concerts.forEach(concert => {
     const listItem = document.createElement("li");
     listItem.classList.add("concert__list--item");
@@ -53,13 +57,11 @@ function renderConcertList() {
     const dateValue = document.createElement("p");
     dateValue.innerText = concert.date;
 
-
     const venueElement = document.createElement("h3");
     venueElement.classList.add("concert__list--venue");
     venueElement.innerText = "Venue";
     const venueValue = document.createElement("p");
     venueValue.innerText = concert.venue;
-
 
     const locationElement = document.createElement("h3");
     locationElement.classList.add("concert__list--location");
@@ -67,7 +69,7 @@ function renderConcertList() {
     const locationValue = document.createElement("p");
     locationValue.innerText = concert.location;
 
-
+ 
     const buyTicketsButton = document.createElement("button");
     buyTicketsButton.classList.add("buyTickets");
     buyTicketsButton.innerText = "Buy Tickets";
@@ -85,29 +87,7 @@ function renderConcertList() {
     concertListContainer.appendChild(listItem);
   });
 }
-
 renderConcertList();
-
-
-
-
-
-// async function fetchAndRenderShows() {
-//   try {
-//     const shows = await BandSiteAPI.getShows();
-//     renderConcertList(shows);
-//   } catch (error) {
-//     console.log(error);
-//   }
-// }
-
-// fetchAndRenderShows();
-
-
-
-
-
-
 
 
 
