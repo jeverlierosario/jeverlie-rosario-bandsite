@@ -5,23 +5,6 @@ const api = new BandSiteAPI(APIKey);
 
 const comments = await api.getcomments();
 
-// const comments = [
-//   {
-//     name: "Connor Walton",
-//     timestamp: "02/17/2021",
-//     message: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."
-//   },
-//   {
-//     name: "Emilie Beach",
-//     timestamp: "01/09/2021",
-//     message: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day."
-//   },
-//   {
-//     name: "Miles Acosta",
-//     timestamp: "12/20/2020",
-//     message: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."
-//   },
-// ]
 
 const commentsContainer = document.querySelector(".comments-display");
 const commentForm = document.getElementById("comment-form");
@@ -43,16 +26,6 @@ function displayComment(comment) {
   const commentElement = document.createElement("div");
   commentElement.classList.add("comment");
 
-
-  const commentDeleteBtn = document.createElement("button");
-  commentDeleteBtn.classList.add("comment-delete-btn");
-  commentDeleteBtn.textContent = "X";
-  commentDeleteBtn.addEventListener("click", async function () {
-    await api.deleteComment(comment.id);
-    comments.splice(comments.indexOf(comment), 1);
-    commentsContainer.removeChild(commentElement);
-  }
-  );
 
   const commentHeader = document.createElement("div");
   commentHeader.classList.add("comment-header");
@@ -81,7 +54,6 @@ function displayComment(comment) {
   commentText.classList.add("comment-text");
   commentText.textContent = comment.comment;
 
-  commentElement.appendChild(commentDeleteBtn);
   commentElement.appendChild(commentHeader);
   commentElement.appendChild(commentText);
 
@@ -121,7 +93,6 @@ commentForm.addEventListener("submit", async function (e) {
   }
 });
 
-//when we refresh the page it should just bring the default 3 comments
 
 const printCommentsToScreen = comments => {
   comments.forEach(displayComment);

@@ -4,7 +4,7 @@
 
 
 //Mobile Styles
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .header {
     background-color: $background-color-1;
     text-align: center;
@@ -161,6 +161,7 @@
   .input-container textarea:focus {
     border: 1px solid #000; 
     outline: none; 
+    
   }
 
   
@@ -684,7 +685,6 @@
     color: $subheadings-text;
     text-transform: uppercase;
     font-weight: 600;
-    // margin-bottom: 0.5rem; 
     padding-bottom: 2rem;
   }
 
@@ -800,4 +800,4 @@
   }
 }
 
-//NEEDS FIXING - DRY!!!!
+//NEEDS FIXING - DRY PRINCIPLE
