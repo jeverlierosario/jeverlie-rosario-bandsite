@@ -5,13 +5,6 @@ const api = new BandSiteAPI(APIKey);
 
 const comments = await api.getcomments();
 
-console.log('comments', comments)
-
-// const comments2 = bandSiteAPI.getComments()
-
-// console.log('comments2', comments2)
-
-
 // const comments = [
 //   {
 //     name: "Connor Walton",
@@ -30,7 +23,7 @@ console.log('comments', comments)
 //   },
 // ]
 
-const commentsContainer = document.querySelector(".comments-container");
+const commentsContainer = document.querySelector(".comments-display");
 const commentForm = document.getElementById("comment-form");
 const nameInput = document.getElementById("name");
 const commentTextInput = document.getElementById("comment-text");
@@ -49,6 +42,17 @@ function getFormattedDate(date) {
 function displayComment(comment) {
   const commentElement = document.createElement("div");
   commentElement.classList.add("comment");
+
+
+  const commentDeleteBtn = document.createElement("button");
+  commentDeleteBtn.classList.add("comment-delete-btn");
+  commentDeleteBtn.textContent = "X";
+  commentDeleteBtn.addEventListener("click", async function () {
+    await api.deleteComment(comment.id);
+    comments.splice(comments.indexOf(comment), 1);
+    commentsContainer.removeChild(commentElement);
+  }
+  );
 
   const commentHeader = document.createElement("div");
   commentHeader.classList.add("comment-header");
@@ -77,12 +81,11 @@ function displayComment(comment) {
   commentText.classList.add("comment-text");
   commentText.textContent = comment.comment;
 
+  commentElement.appendChild(commentDeleteBtn);
   commentElement.appendChild(commentHeader);
   commentElement.appendChild(commentText);
 
   commentsContainer.insertBefore(commentElement, commentsContainer.firstChild);
-
-
   commentsContainer.appendChild(commentElement);
   commentElement.classList.add("comment__form--items");
 }
@@ -99,16 +102,33 @@ commentForm.addEventListener("submit", async function (e) {
   if (name && comment) {
     const response = await api.postComment({name, comment})
     const timestamp = response.timestamp
-    // displayComment({name, comment, timestamp});
-    location.reload() 
-    clearCommentForm();
+
+    const newComment = {
+      name,
+      comment,
+      timestamp
+    };
+    comments.unshift(newComment);
+
+    while (commentsContainer.firstChild) {
+      if (commentsContainer.firstChild.classList?.contains('comment')) {
+        commentsContainer.removeChild(commentsContainer.firstChild);
+      }
+    }
+    printCommentsToScreen(comments);
+
+    clearCommentForm()
   }
 });
 
 //when we refresh the page it should just bring the default 3 comments
 
+const printCommentsToScreen = comments => {
+  comments.forEach(displayComment);
 
-comments.forEach(displayComment);
+}
+
+printCommentsToScreen(comments)
 
 
 

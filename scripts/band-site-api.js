@@ -36,6 +36,14 @@ export class BandSiteAPI {
       console.error(error);
     }
   }
-}
 
-// module.exports = BandSiteAPI;
+  async deleteComment(commentId) {
+    try {
+      const response = await axios.delete(`${this.baseURL}/comments/${commentId}?api_key=${this.apiKey}`);
+      console.log(response.data);
+      return response.data;
+    } catch (error) {
+      console.error(error);
+    }
+  }
+}
